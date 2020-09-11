@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register2.min.css">
+</head>
+<body>
+    <!-- 头部弹出的信息框 -->
+    <div id="text">
+        <button id="close" type="button">✖</button>
+    </div>
+    <!-- 头部 -->
+    <header>
+
+    </header>
+    <!-- 创建账户主体 -->
+    <section>
+        <button type="button" id="back">返回</button>
+        <h1>创建账户</h1>
+        <p class="p">请根据步骤输入您的信息，来创建您的迪卡侬账户</p>
+        <div id="box">
+            <h3>验证手机</h3>
+            <span>手机号码*</span>
+            <p><input type="text" id="txt" placeholder="| &nbsp;国内手机号码和邮箱"></p> 
+            <span>验证码*</span>
+            <p><input type="text" class="text"></p>
+            <a href="#">重新发送验证码</a>
+            <h3>填写个人信息</h3>
+            <span>性别：</span>
+            <p class="sex">
+                <label><input type="radio"> &nbsp;男士 </label>
+                <label><input type="radio"> &nbsp;女士</label>
+            </p>
+            <span>姓*：</span>
+            <span>名*：</span>
+            <p>
+                <input type="text" class="text">
+                <input type="text" class="text">
+            </p>
+            <h3>设置密码</h3>
+            <h2>创建密码</h2>
+            <p>请根据要求创建密码</p>
+            <span>密码*</span>
+            <p>
+                <input type="password" class="text">
+                <div>
+                    <h5>您的密码需要包含：</h5>
+                    <p>至少8个字符</p>
+                    <p>至少1个数字</p>
+                    <p>至少一个英文字母</p>
+                </div>
+            </p>
+            <label for=""><input type="checkbox">自动登录</label>
+            <h3>推送优惠及活动</h3>
+            <p>我希望收到迪卡侬及其激情品牌的最新资讯和活动*：</p>
+            <p>
+                <label for=""><input type="radio">是</label>
+                <label for=""><input type="radio">否</label>
+            </p>
+        </div>
+    </section>
+</body>
+</html>

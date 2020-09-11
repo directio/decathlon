@@ -1,0 +1,41 @@
+//宏定义
+@mixin size($width,$background){
+    width: $width;
+    background: $background;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,hr,ul,ol,td,input,option,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑";
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+
+/* 头部弹出的信息框 */
+#text{
+    @include size(100%,#323233);
+    height: 37px;
+}
+#close{
+    color: white;
+    float: right;
+    border: none;
+    height: 100%;
+    background: #323233;
+    outline: none;
+}
+/* 头部 */
+header{
+    @include size(100%,grey);
+    height: 54px;
+    color: #575859;
+}

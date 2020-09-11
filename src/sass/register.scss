@@ -1,0 +1,57 @@
+@import 'public';
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+/* 验证框*/
+#validation{
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(hsla(0,0%,100%,.6),hsla(0,0%,100%,.6)), url(../images/regiter.jpg);
+    background-size: 100%;
+    overflow: hidden;
+    form{
+        @include size(300px,white);
+        margin: 70px auto 0;
+        padding: 30px;
+        h1{
+            font-style: italic;
+        }
+        .prompt{
+            font-size: 12px;
+            margin: 5px 0 12px;
+        }
+        #txt{
+            width: 240px;
+            height: 40px;
+            border: 1px solid #d4d7d9;
+            margin-bottom: 20px;
+            background: url(../images/flag.jpg) no-repeat 8px center;
+            background-size: 30px;
+            padding-left: 50px;
+            font-size: 14px;
+        }
+        #txt::-webkit-input-placeholder{
+            color: #d4d7d9;
+        }
+        #btn{
+            @include size(290px,#0082c3);
+            height: 40px;
+            border: none;
+            color: white;
+            font-weight: 700;
+        }
+    }
+    #note{
+        position: absolute;
+        bottom: 10px;
+        left: 40%;
+        color: #323233;
+        font-size: 12px;
+    }
+}
+
+
+
+

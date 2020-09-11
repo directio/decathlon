@@ -1,0 +1,86 @@
+@import 'public';
+body{
+    background: #edeff1;
+}
+/* 创建账户主体部分 */
+section{
+    @include size(950px,#edeff1);
+    margin: 50px auto 0;
+    button{
+        padding: 8px 30px 8px 45px;
+        background: #d4d7d9;
+        border: none;
+        font: 12px/16px "Roboto-condensed,Arial Narrow";
+        font-weight: 700;
+    }
+    h1{
+        font-size: 30px;
+        color: #0082c3;
+        font-style: italic;
+        margin-top: 20px;
+    }
+    .p{
+        font-size: 12px;
+        color: #323233;
+        margin-bottom: 10px;
+    }
+    #box{
+        color: #323233;
+        @include size(100%, white);
+        padding: 50px;
+        h3{
+            color: #0082c3;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 10px;
+            clear: both;
+        }
+        span{
+            display: inline-block;
+            color: #7d7e80;
+            font-size: 12px;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+        #txt{
+            width: 240px;
+            height: 40px;
+            border: 1px solid #d4d7d9;
+            margin-bottom: 20px;
+            background: url(../images/flag.jpg) no-repeat 8px center;
+            background-size: 30px;
+            padding-left: 50px;
+            font-size: 14px;
+        }
+        .text{
+            width: 290px;
+            height: 40px;
+            border: 1px solid #d4d7d9;
+        }
+        a{
+            display: inline-block;
+            color: #0082c3;
+            font-size: 14px;
+            text-decoration: underline;
+            padding-bottom: 40px;
+        }
+        label{
+            margin-right: 30px;
+        }
+        label input{
+            vertical-align: middle;
+        }
+        .sex{
+            height: 20px;
+            margin-top: 10px;
+            font-size: 12px;
+            vertical-align: middle;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .name{
+            float: left;
+            margin-right: 20px;
+        }
+    }
+}
