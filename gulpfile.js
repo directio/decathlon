@@ -9,16 +9,16 @@ let babel = require('gulp-babel');
 let sass = require('gulp-sass');
 
 //二、发布任务
-//优化js任务
-// function fnJS(){
-//     return gulp.src('./src/js/*.js')
-//         .pipe(babel({
-//             presets: ['@babel/env']
-//         }))
-//         .pipe(uglify())
-//         .pipe(rename({suffix : '.min'}))
-//         .pipe(gulp.dest('./dist/js'));
-// }
+// 优化js任务
+function fnJS(){
+    return gulp.src('./src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        .pipe(rename({suffix : '.min'}))
+        .pipe(gulp.dest('./dist/js'));
+}
 
 //优化css
 function fnSass(){
@@ -47,14 +47,14 @@ function fnCopyIndex(){
 
 //监听任务
 function fnWatch(){
-    // gulp.watch('./src/js/*.js',fnJS);
+    gulp.watch('./src/js/*.js',fnJS);
     gulp.watch('./src/sass/*.scss',fnSass);
     gulp.watch('./src/index.html',fnCopyIndex);
     gulp.watch('./src/pages/*.html',fnHtml);
 }
 
 //三、导出任务
-// exports.js = fnJS;
+exports.js = fnJS;
 exports.sass = fnSass;
 exports.img = fnImg;
 exports.copyIndex = fnCopyIndex;

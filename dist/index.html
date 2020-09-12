@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.min.css">
-    <script src="./src/js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="./css/iconfont.css">
 </head>
 <body>
     <!-- 头部弹出的信息框 -->
     <div id="text">
-        <button id="close" type="button">✖</button>
+        单笔订单满99包邮（健身大器械、乒乓球桌、自行车除外）
+        <input type="button" id="close" value="✖">
     </div>
     <!-- 头部 -->
     <header>
-
+        <a href="#" class="sort">
+            
+            <span class="iconfont icon-icon-sort"></span>
+            <span>分类</span>
+        </a>
+        <img src="../dist/images/logo.jpg" alt="">
+        <input type="text" placeholder="搜索商品或商品号">
+        <input type="button" id="btn">
+        <div class="list">
+            <a href="#"><span>帮助</span></a>
+            <a href="#"><span>门店</span></a>
+            <a href="#"><span>账户</span></a>
+            <a href="#"><span>购物车</span></a>
+        </div>
     </header>
+
     <!-- 轮播图 -->
     <div id="banner">
 
@@ -186,5 +201,7 @@
         <p class="footerLeft">所有产品价格均包含增值税。</p>
         </div>
     </footer>
+    <script src="../dist/js/jquery-1.12.4.min.js"></script>
+    <script src="../dist/js/index.min.js"></script>
 </body>
 </html>

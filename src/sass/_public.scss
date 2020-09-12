@@ -19,13 +19,17 @@ a{
 img{
 	border: none;
 }
-
 /* 头部弹出的信息框 */
 #text{
     @include size(100%,#323233);
     height: 37px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 37px;
 }
 #close{
+    margin-right: 10px;
     color: white;
     float: right;
     border: none;
@@ -35,7 +39,83 @@ img{
 }
 /* 头部 */
 header{
-    @include size(100%,grey);
+    overflow: hidden;
+    @include size(100%,white);
     height: 54px;
     color: #575859;
+    .sort{
+        display: block;
+        width: 100px;
+        height: 100%;
+        margin-left: -10px;
+        background: #edeff1;
+        transform: skew(10deg);
+        text-indent: 25px;
+        line-height: 52px;
+        font-size: 12px;
+        color: #575859;
+        font-style: normal;
+        float: left;
+        span{
+            display: inline-block;
+            transform: skew(-10deg);
+            font-weight: 700;
+        }
+    }
+    img{
+        height: 30px;
+        margin-left: 20px;
+        margin-top: 12px;
+        float: left;
+    }
+    input:nth-of-type(1){
+        outline: none;
+        border: none;
+        background: #edeff1;
+        height: 35px;
+        padding: 0 6px 0 8px;
+        width: 600px;
+        margin-top: 10px;
+        float: left;
+        margin-left: 20px;
+        border-radius: 0 2px 2px 0;
+    }
+    input:nth-of-type(1)::-webkit-input-placeholder{
+        color: gainsboro;
+    }
+    input:nth-of-type(2){
+        @include size(54px,white);
+        height: 35px;
+        transform: skew(10deg);
+        margin-top: 10px;
+        margin-left: -5px;
+        border: 1px solid #edeff1;
+        border-radius: 0 2px 2px 0;
+    }
+    .list{
+        float: right;
+        margin-left: 10px;
+        margin-right: -10px;
+        a{
+            display: block;
+            height: 54px;
+            width: 85px;
+            transform: skew(10deg);
+            float: left;
+            border-left: 1px solid #edeff1;
+            text-align: center;
+            line-height: 54px;
+            span{
+                display: inline-block;
+                transform: skew(-10deg);
+                font-size: 13px;
+                color: #575859;
+            }
+        }
+        a:nth-child(4){
+            width: 120px;
+            background: #ffea28;
+            color: #323233;
+        }
+    }
 }
