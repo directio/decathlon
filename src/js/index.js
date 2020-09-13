@@ -107,7 +107,6 @@ class Tab{
         })
     }
 }
-new Tab();
 
 /* 点击分类出现左侧选项卡 */
 let is_on = false;
@@ -125,13 +124,14 @@ $('.sort').click(function(){
 $(function(){
     /*  鼠标点击左侧内容栏   滑动出弹层 */
      $('.float').each(function(index,value){
-         $(value).click(function(){
+         $(value).mouseenter(function(){
              $(this).find('li').addClass("active");
              $(this).siblings().find('li').removeClass("active");
              var thisUB = $('.cat_wrap .cat_list .float').index($(this));
              if($.trim($('.cat_subcont .cat_sublist').eq(thisUB).html()) != ""){
                  $('.cat_subcont').addClass('active');
                  $('.cat_sublist').hide();
+                 $('.cat_sublist').eq(thisUB).html();
                  $('.cat_sublist').eq(thisUB).show();
              }else{
                  $('.cat_subcont').removeClass('active');

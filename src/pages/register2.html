@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="../css/register2.min.css">
 </head>
 <body>
-    <!-- 头部弹出的信息框 -->
-    <div id="text">
-        <button id="close" type="button">✖</button>
-    </div>
     <!-- 头部 -->
     <header>
 
@@ -30,8 +26,8 @@
             <h3>填写个人信息</h3>
             <span>性别：</span>
             <p class="sex">
-                <label><input type="radio"> &nbsp;男士 </label>
-                <label><input type="radio"> &nbsp;女士</label>
+                <label><input type="radio" name="sex"> &nbsp;男士 </label>
+                <label><input type="radio" name="sex"> &nbsp;女士</label>
             </p>
             <div class="surname">
                 <span>姓*：</span><br>
@@ -46,7 +42,11 @@
             <p class="p">请根据要求创建密码</p>
             <p class="pwd-input">
                 <span>密码*</span><br>
-                <input type="password" class="text"> <br>
+                <input type="password" class="text pwd"> <br>
+                <span class="warning">
+                    <span class="triangle"></span>
+                    <span class="tip">您的密码必须包含至少8个字符，一个数字，一个英文字母</span>
+                </span>
                 <label for=""><input type="checkbox"> &nbsp;自动登录
                     <!-- <a href=""></a> -->
                 </label>
@@ -75,5 +75,10 @@
         <p class="id">创建账户，必须填写</p>
         <p class="info">您的数据被用于迪卡侬有限公司及其数据质量控制中心以及所有的迪卡侬电子商务公司。您的数据将被用于发电子邮件、研究、统计数据以及市场营销行为、以便您能收到基于您运动喜好而定制的个性化产品或服务，并能够对我们的产品和服务进行监控。根据1976年1一月6日的数据保护法修订条例，您有权使用、修改或拒绝您的数据通过电子邮件或邮寄的形式被发送？</p>
     </div>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/tools.min.js"></script>
+    <script src="../js/register2.min.js"></script>
 </body>
+
 </html>

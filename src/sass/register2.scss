@@ -2,6 +2,9 @@
 body{
     background: #edeff1;
 }
+input{
+    outline: none;
+}
 /* 创建账户主体部分 */
 .back{
     padding: 8px 30px 8px 45px;
@@ -55,9 +58,10 @@ section{
             font-size: 14px;
         }
         .text{
-            width: 290px;
+            width: 275px;
             height: 40px;
             border: 1px solid #d4d7d9;
+            padding-left: 15px;
         }
         a{
             display: inline-block;
@@ -96,6 +100,44 @@ section{
         }
         .pwd-input{
             float: left;
+            .warning{
+                width: 280px;
+                position: relative;
+                display: none;
+                .triangle{
+                    position: absolute;
+                    left: 30px;
+                    top: -5px;
+                    width: 0;
+                    height: 0;
+                    float: left;
+                    border: {
+                        style : solid;
+                        width: 5px;
+                        left : {
+                            color: transparent;
+                        }
+                        right : {
+                            color: transparent;
+                        }
+                        top : {
+                            color: transparent;
+                        }
+                        bottom : {
+                            color : #e20c18;
+                        }
+                    }
+                }
+                .tip{
+                    float: left;
+                    display: block;
+                    background: #e20c18;
+                    color: white;
+                    width: 276px;
+                    padding: 8px;
+                    margin-top: 5px;
+                }
+            }
             label{
                 display: block;
                 font-size: 12px;
@@ -133,11 +175,18 @@ section{
     padding-bottom: 50px;
     .create{
         @include size(100px,#0082c3);
-        padding: 8px 30px 8px 45px;
+        padding: 8px 30px 10px 45px;
         color: white;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 700;
         float: right;
+        vertical-align: middle;
+        span{
+            color: white;
+            font-size: 16px;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
     }
     .read{
         clear: both;
