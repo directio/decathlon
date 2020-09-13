@@ -1,0 +1,76 @@
+
+{
+    "tab" : [
+        {
+            "src" :  "./images/tab-js.png",
+            "a" : "健身"
+        },
+        {
+            "src" :  "./images/tab-run.png",
+            "a" : "跑步"
+        },
+        {
+            "src" :  "./images/tab-bike.png",
+            "a" : "自行车"
+        }
+    ],
+    "sport" : [
+        {
+            "src" :  "./images/tab-js.png",
+            "title" : "健身",
+            "li1" : "有氧健身装备",
+            "li2" : "塑性/力量装备及食品",
+            "li3" : "男士服饰",
+            "li4" : "女士服饰"
+        },
+        {
+            "src" :  "./images/tab-run.png",
+            "title" : "跑步",
+            "li1" : "男士",
+            "li2" : "女士",
+            "li3" : "青少年"
+        },
+        {
+            "src" :  "./images/tab-bike.png",
+            "title" : "自行车",
+            "li1" : "公路",
+            "li2" : "儿童",
+            "li3" : "山地",
+            "li4" : "经典城市",
+            "li5" : "折叠车",
+            "li6" : "旅行"
+        },
+        {
+            "src" :  "./images/tab-bike.png",
+            "title" : "自行车",
+            "li1" : "公路",
+            "li2" : "儿童",
+            "li3" : "山地",
+            "li4" : "经典城市",
+            "li5" : "折叠车",
+            "li6" : "旅行"
+        },
+        {
+            "src" :  "./images/sport-walk.png",
+            "title" : "一日徒步",
+            "li1" : "男士",
+            "li2" : "女士",
+            "li3" : "青少年"
+        },
+        {
+            "src" :  "./images/sport-trip.png",
+            "title" : "户外露营",
+            "li1" : "睡袋/床垫",
+            "li2" : "帐篷",
+            "li3" : "桌椅/灯具",
+            "li4" : "水壶/炊具/食品",
+            "li5" : "清洁/防护"
+        },
+        {
+            "src" :  "./images/sport-child.png",
+            "title" : "儿童体能",
+            "li1" : "女童",
+            "li2" : "幼童"
+        }
+    ]
+}

@@ -8,21 +8,16 @@
     <link rel="stylesheet" href="./css/iconfont.css">
 </head>
 <body>
-    <!-- 头部弹出的信息框 -->
-    <div id="text">
-        单笔订单满99包邮（健身大器械、乒乓球桌、自行车除外）
-        <input type="button" id="close" value="✖">
-    </div>
     <!-- 头部 -->
     <header>
         <a href="#" class="sort">
-            
-            <span class="iconfont icon-icon-sort"></span>
-            <span>分类</span>
+            <span class="iconfont icon-icon-sort">&nbsp;&nbsp; 分类</span>
         </a>
         <img src="../dist/images/logo.jpg" alt="">
         <input type="text" placeholder="搜索商品或商品号">
-        <input type="button" id="btn">
+        <button type="button" id="btn">
+            <span class="iconfont icon-icon-search"></span>
+        </button>
         <div class="list">
             <a href="#"><span>帮助</span></a>
             <a href="#"><span>门店</span></a>
@@ -30,177 +25,483 @@
             <a href="#"><span>购物车</span></a>
         </div>
     </header>
+    <!-- 左侧选项卡 -->
+    <!-- banner上面浮层 -->
+    <div id="tab">
+        <div class="cat_wrap">
+            <div class="cat_header">
+                <div class="cat_list">
+                    <div class="float for1">
+                        <ul class="clearfix">
+                            <li class="active">所有运动</li>
+                        </ul>
+                    </div>
+                    <div class="float for2">
+                        <ul class="clearfix">
+                            <li>运动服饰</li>
+                        </ul>
+                    </div>
+                    <div class="float for3">
+                        <ul class="clearfix">
+                            <li>运动鞋袜</li>
+                        </ul>
+                    </div> 
+                    <div class="float for4">
+                        <ul class="clearfix">
+                            <li>运动装备</li>
+                        </ul>
+                    </div> 
+                    <div class="float for5">
+                        <ul class="clearfix">
+                            <li>特惠专区</li>
+                        </ul>
+                    </div> 
+                    <div class="float for6">
+                        <ul class="clearfix">
+                            <li>生态设计</li>
+                        </ul>
+                    </div> 
+                    <div class="float for7">
+                        <ul class="clearfix">
+                            <li>保养维修</li>
+                        </ul>
+                    </div>
+                    <div class="float for8">
+                        <ul class="clearfix">
+                            <li>个性定制</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- banner浮层滑动显示弹框 -->
+            <div class="cat_subcont">
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
 
-    <!-- 轮播图 -->
-    <div id="banner">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
+                            <div class="list">
+                                <h3>户外运动</h3>
+                                <a href="#">一日徒步服饰</a>
+                                <a href="#">多日徒步服饰</a>
+                                <a href="#">滑雪服饰</a>
+                                <a href="#">攀岩/高山攀登服饰</a>
+                            </div>
+                            <div class="list">
+                                <h3>室内健身</h3>
+                                <a href="#">健身服饰</a>
+                                <a href="#">普拉提服饰</a>
+                                <a href="#">瑜伽服饰</a>
+                                <a href="#">儿童体能服饰</a>
+                                <a href="#">舞蹈服饰</a>
+                                <a href="#">武术服饰</a>
+                            </div>
+                            <div class="list">
+                                <h3>水上运动</h3>
+                                <a href="#">游泳服饰</a>
+                                <a href="#">冲浪服饰</a>
+                                <a href="#">航海服饰</a>
+                                <a href="#">潜水服饰</a>
+                                <a href="#">皮划艇/SUP桨板服饰</a>
+                                <a href="#">水中有氧服饰</a>
+                            </div>
+                            <div class="list">
+                                <h3>跑步健走</h3>
+                                <a href="#">跑步服饰</a>
+                                <a href="#">健走服饰</a>
+                            </div>
+                            <div class="list">
+                                <h3>团体运动</h3>
+                                <a href="#">足球服饰</a>
+                                <a href="#">篮球服饰</a>
+                                <a href="#">排球服饰</a>
+                                <a href="#">橄榄球服饰</a>
+                                <a href="#">棒球服饰</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
 
-    </div>
-    <!-- 运动 -->
-    <section>
-        <h1 class="big-title">80+种运动 任你挑选</h1>
-        <div id="sport">
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-            <div class="de-sport"></div>
-        </div>
-        <a href="#" class="more-sport">查看所有运动</a>
-    </section>
-    <!-- 额外信息 -->
-    <div id="benefitFloor">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
 
-    </div>
-    <!-- 侬说搭配 -->
-    <div id="collocation">
-        <h1 class="big-title">侬说搭配</h1>
-        <div class="col-box">
-            <a href="#"><img src="images/col1.jpg" alt=""></a>
-            <div class="col-right">
-                <div class="col-detail"></div>
-                <div class="col-detail"></div>
-                <div class="col-detail"></div>
-                <div class="col-detail"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
+
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
+
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="cat_sublist">
+                    <!-- 浮层左边列表 -->
+                    <div class="fore1">
+                        <div class="fore_list">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-box">
-            <div class="col-left">
-                <div class="col-detail-2"></div>
-                <div class="col-detail-2"></div>
-                <div class="col-detail-2"></div>
-                <div class="col-detail-2"></div>
-                <div class="col-detail-2"></div>
-                <div class="col-detail-2"></div>
+    </div>
+<!-- 轮播图 -->
+<div id="banner">
+    <div class="swiper-contione">
+        <div class="swiper">
+            <div class="swiper-item">
+                <img src="./images/banner1.jpg">
             </div>
-            <a href="#"><img src="images/col2.jpg" alt=""></a>
+            <div class="swiper-item">
+                <img src="./images/banner2.jpg">
+            </div>
+            <div class="swiper-item">
+                <img src="./images/banner3.jpg">
+            </div>
+            <div class="swiper-item">
+                <img src="./images/banner4.jpg">
+            </div>
+            <div class="swiper-item">
+                <img src="./images/banner5.jpg">
+            </div>
+            <div class="swiper-item">
+                <img src="./images/banner6.jpg">
+            </div>
         </div>
-        <div class="col-box">
-            <a href="#"><img src="images/col3.jpg" alt=""></a>
-            <div class="col-left">
-                <div class="col-detail-2 col-detail-3"></div>
-                <div class="col-detail-2 col-detail-3"></div>
-                <div class="col-detail-2 col-detail-3"></div>
-                <div class="col-detail-2 col-detail-3"></div>
-                <div class="col-detail-2 col-detail-3"></div>
-                <div class="col-detail-2 col-detail-3"></div>
+        <div class="swiper-point">
+            <div class="swiper-point-item">
+                <div class="point active"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
+                <div class="point"></div>
             </div>
+        </div>
+        <div class="swiper-left">
+            <img src="./images/left.png">
+        </div>
+        <div class="swiper-right">
+            <img src="images/right.png">
         </div>
     </div>
-    <!-- 侬粉热搜 -->
-    <div id="hotSearch">
-        <h1 class="big-title">侬粉热搜</h1>
+</div>
+<!-- 运动 -->
+<section>
+    <h1 class="big-title">80+种运动 任你挑选</h1>
+    <div id="sport">
+
+    </div>
+    <a href="#" class="more-sport">查看所有运动</a>
+</section>
+<!-- 额外信息 -->
+<div id="benefitFloor">
+    <img src="./images/extra.jpg" alt="">
+    <img src="./images/extra2.jpg" alt="">
+    <img src="./images/extra3.jpg" alt="">
+    <img src="./images/extra4.jpg" alt="">
+</div>
+<!-- 侬说搭配 -->
+<div id="collocation">
+    <h1 class="big-title">侬说搭配</h1>
+    <div class="col-box">
+        <a href="#"><img src="images/col1.jpg" alt=""></a>
+        <div class="col-right">
+            <a href="#" class="col-detail">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+        </div>
+    </div>
+    <div class="col-box">
+        <div class="col-left">
+            <a href="#" class="col-detail-2">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+        </div>
+        <a href="#"><img src="images/col2.jpg" alt=""></a>
+    </div>
+    <div class="col-box">
+        <a href="#"><img src="images/col3.jpg" alt=""></a>
+        <div class="col-left">
+            <a href="#" class="col-detail-2 col-detail-3">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2 col-detail-3">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2 col-detail-3">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2 col-detail-3">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2 col-detail-3">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+            <a href="#" class="col-detail-2 col-detail-3">
+                <img src="./images/cols1.jpg" alt="">
+                <h6 class="s-title">NYAMBA</h6>
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- 侬粉热搜 -->
+<div id="hotSearch">
+    <h1 class="big-title">侬粉热搜</h1>
+    <ul>
+        <li>
+            <a href="#">#防晒</a>
+        </li>
+        <li>
+            <a href="#">#短裤</a>
+        </li>
+        <li>
+            <a href="#">#背包</a>
+        </li>
+        <li>
+            <a href="#">#泳镜</a>
+        </li>
+        <li>
+            <a href="#">#凉鞋</a>
+        </li>
+        <li>
+            <a href="#">#清仓</a>
+        </li>
+    </ul>
+</div>
+<!-- 猜你喜欢 -->
+<div id="guessLike">
+    <h1 class="big-title">猜你喜欢</h1>
+    <div id="likeBox">
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a class="like-detail">
+            <img src="./images/glass.jpg" alt="">
+                <p>女士基础健身紧身裤 Fit+500 -黑色</p>
+                <span>￥59.<b>90</b></span>
+        </a>
+        <a href="#" class="more">查看更多</a>
+        <div class="img-box">
+            <a href="#"><img src="images/like1.jpg" alt=""></a>
+            <a href="#"><img src="images/like2.jpg" alt=""></a>
+            <a href="#"><img src="images/like3.jpg" alt=""></a>
+            <a href="#"><img src="images/like4.jpg" alt=""></a>
+        </div>
+    </div>
+    <!-- 创新产品 -->
+    <div id="createPro">
+        <h1 class="big-title">创新产品</h1>
+        <div class="create-banner"></div>
+    </div>
+    <!-- 服务 -->
+    <div id="server">
         <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li>
+                <a href="#">用户评价</a>
+            </li>
+            <li>
+                <a href="#">门店自提</a>
+            </li>
+            <li>
+                <a href="#">会员福利</a>
+            </li>
+            <li>
+                <a href="#">工作室</a>
+            </li>
+            <li>
+                <a href="#">退换货保障</a>
+            </li>
         </ul>
     </div>
-    <!-- 猜你喜欢 -->
-    <div id="guessLike">
-        <h1 class="big-title">猜你喜欢</h1>
-        <div id="likeBox">
-            <div class="like-detail"></div>
-            <div class="like-detail"></div>
-            <div class="like-detail"></div>
-            <div class="like-detail"></div>
-            <div class="like-detail"></div>
-            <div class="like-detail"></div>
-            <div class="like-detail"></div>
-            <div class="like-detail"></div>
-            <a href="#" class="more">查看更多</a>
-            <div class="img-box">
-                <img src="images/like1.jpg" alt="">
-                <img src="images/like2.jpg" alt="">
-                <img src="images/like3.jpg" alt="">
-                <img src="images/like4.jpg" alt="">
-            </div>
-        </div>
-        <!-- 创新产品 -->
-        <div id="createPro">
-            <h1 class="big-title">创新产品</h1>
-            <div class="create-banner"></div>
-            <h3>产品召回</h3>
-            <div id="callBack">
-                <div class="call-detail"></div>
-                <div class="call-detail"></div>
-                <div class="call-detail"></div>
-            </div>
-        </div>
-        <!-- 服务 -->
-        <div id="server">
-            <ul>
-                <li>
-                    <a href="#">用户评价</a>
-                </li>
-                <li>
-                    <a href="#">门店自提</a>
-                </li>
-                <li>
-                    <a href="#">会员福利</a>
-                </li>
-                <li>
-                    <a href="#">工作室</a>
-                </li>
-                <li>
-                    <a href="#">退换货保障</a>
-                </li>
-            </ul>
+</div>
+<!-- footer -->
+<footer>
+    <div id="footerTop">
+        <ul class="small-ul">
+            <h3 class="small-title">关于迪卡侬</h3>
+            <li><a href="#">dfdfd</a></li>
+            <li><a href="#">fff</a></li>
+            <li><a href="#">fff</a></li>
+        </ul>
+        <ul class="small-ul">
+            <h3 class="small-title">我们的服务</h3>
+            <li><a href="#">fdfs</a></li>
+            <li><a href="#">fdfff</a></li>
+            <li><a href="#">ffff</a></li>
+            <li><a href="#">ffff</a></li>
+            <li><a href="#">fff</a></li>
+            <li><a href="#">fff</a></li>
+        </ul>
+        <ul class="small-ul">
+            <h3 class="small-title">帮助</h3>
+            <li><a href="#">fff</a></li>
+            <li><a href="#">fff</a></li>
+            <li><a href="#">ffff</a></li>
+        </ul>
+        <ul class="small-ul">
+            <h3 class="small-title">合法</h3>
+            <li><a href="#">ffff</a></li>
+            <li><a href="#">ffff</a></li>
+            <li><a href="#">fffg</a></li>
+        </ul>
+        <div class="code">
+            <img src="images/code.jpg" alt="">
+            <h3 class="attention">关注迪卡侬</h3>
         </div>
     </div>
-    <!-- footer -->
-    <footer>
-        <div id="footerTop">
-            <ul class="small-ul">
-                <h3 class="small-title">关于迪卡侬</h3>
-                <li><a href="#">dfdfd</a></li>
-                <li><a href="#">fff</a></li>
-                <li><a href="#">fff</a></li>
-            </ul>
-            <ul class="small-ul">
-                <h3 class="small-title">我们的服务</h3>
-                <li><a href="#">fdfs</a></li>
-                <li><a href="#">fdfff</a></li>
-                <li><a href="#">ffff</a></li>
-                <li><a href="#">ffff</a></li>
-                <li><a href="#">fff</a></li>
-                <li><a href="#">fff</a></li>
-            </ul>
-            <ul class="small-ul">
-                <h3 class="small-title">帮助</h3>
-                <li><a href="#">fff</a></li>
-                <li><a href="#">fff</a></li>
-                <li><a href="#">ffff</a></li>
-            </ul>
-            <ul class="small-ul">
-                <h3 class="small-title">合法</h3>
-                <li><a href="#">ffff</a></li>
-                <li><a href="#">ffff</a></li>
-                <li><a href="#">fffg</a></li>
-            </ul>
-            <div class="code">
-                <img src="images/code.jpg" alt="">
-                <h3 class="attention">关注迪卡侬</h3>
-            </div>
+    <div id="footerBottom">
+        <div id="footerRight">
+            <p>Copyright 2003- 2020 , 迪卡侬集团及其附属公司。 <span>沪ICP备16000315号-7</span></p>
+            <img src="images/police1.png" alt="" class="police1">
+            <img src="images/police2.png" alt="" class="police2">
         </div>
-        <div id="footerBottom">
-            <div id="footerRight">
-                <p>Copyright 2003- 2020 , 迪卡侬集团及其附属公司。 <span>沪ICP备16000315号-7</span></p>
-                <img src="images/police1.png" alt="" class="police1">
-                <img src="images/police2.png" alt="" class="police2">
-            </div>
-        <p class="footerLeft">所有产品价格均包含增值税。</p>
-        </div>
+    <p class="footerLeft">所有产品价格均包含增值税。</p>
+    </div>
     </footer>
+    
     <script src="../dist/js/jquery-1.12.4.min.js"></script>
     <script src="../dist/js/index.min.js"></script>
 </body>

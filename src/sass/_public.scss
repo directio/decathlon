@@ -19,6 +19,9 @@ a{
 img{
 	border: none;
 }
+body{
+    overflow-x: hidden;
+}
 /* 头部弹出的信息框 */
 #text{
     @include size(100%,#323233);
@@ -39,10 +42,17 @@ img{
 }
 /* 头部 */
 header{
+    position: relative;
     overflow: hidden;
     @include size(100%,white);
     height: 54px;
     color: #575859;
+    #tab{
+        overflow: hidden;
+        width: 600px;
+        background: grey;
+        position: absolute;
+    }
     .sort{
         display: block;
         width: 100px;
@@ -50,17 +60,21 @@ header{
         margin-left: -10px;
         background: #edeff1;
         transform: skew(10deg);
-        text-indent: 25px;
+        text-indent: 15px;
         line-height: 52px;
-        font-size: 12px;
         color: #575859;
         font-style: normal;
         float: left;
         span{
+            font-size: 12px;
             display: inline-block;
             transform: skew(-10deg);
             font-weight: 700;
         }
+    }
+    .sort:hover{
+        background: #0082c3;
+        color: white;
     }
     img{
         height: 30px;
@@ -74,7 +88,7 @@ header{
         background: #edeff1;
         height: 35px;
         padding: 0 6px 0 8px;
-        width: 600px;
+        width: 380px;
         margin-top: 10px;
         float: left;
         margin-left: 20px;
@@ -83,7 +97,8 @@ header{
     input:nth-of-type(1)::-webkit-input-placeholder{
         color: gainsboro;
     }
-    input:nth-of-type(2){
+    #btn{
+        outline: none;
         @include size(54px,white);
         height: 35px;
         transform: skew(10deg);
@@ -91,6 +106,12 @@ header{
         margin-left: -5px;
         border: 1px solid #edeff1;
         border-radius: 0 2px 2px 0;
+        span{
+            display: inline-block;
+            transform: skew(-10deg);
+            color: #0082c3;
+            font-size: 20px;
+        }
     }
     .list{
         float: right;
@@ -117,5 +138,130 @@ header{
             background: #ffea28;
             color: #323233;
         }
+    }
+}
+/* 左侧选项卡 */
+
+a,li {
+    list-style:none;
+}
+.cf:before,.cf:after,.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.cf:after,.clearfix:after {
+    clear:both;
+}
+.cf,.clearfix {
+    clear:both;
+    *zoom:1;
+}
+#tab{
+    position: absolute;
+    z-index: 9999999999;
+    transition: all 1s;
+    transform: translateX(-605px);
+}
+/*banner上面浮层*/
+.cat_wrap {
+    box-shadow: inset 0px 6px 5px -5px grey;
+    padding-top: 1px;
+    width:135px;
+    position:absolute;
+    z-index:999;
+    padding-bottom: 100px;
+    background: #f9f9f9;
+
+}
+.cat_wrap .cat_header {
+    min-height:450px;
+}
+.cat_wrap .cat_list div {
+    background:#fff;
+    border-left:3px solid transparent;
+}
+.cat_wrap .cat_list div li {
+    background: #f9f9f9;
+    float:left;
+    color:#323232;
+    font-size:14px;
+    width: 110px;
+    height: 60px;
+    line-height: 60px;
+    color: #232323;
+    font-size: 15px;
+    padding-left: 20px;
+    border-right: 1px solid #e7e7e7;
+}
+.cat_wrap .cat_list {
+    cursor:pointer;
+}
+.cat_wrap .cat_list div .active {
+    z-index:999;
+    border-right:none;
+    background: white;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    color: #0082c3;
+    font-weight: 700;
+}
+/*banner浮层滑动显示弹框*/
+.cat_subcont .cat_sublist {
+    height: 582px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: inset 0px 6px 5px -5px darkgrey;
+    position:absolute;
+    z-index:998;
+    top:0;
+    left:135px;
+    padding-top:5px;
+    min-height:394px;
+    width:470px;
+    background:#fff;
+}
+.for1{
+    box-shadow: inset 0px 6px 5px -5px darkgrey;
+    padding-top: 1px;
+}
+.cat_subcont .cat_sublist .fore1 {
+    width:470px;
+}
+.cat_subcont .cat_sublist .fore1 .fore_list {
+    padding: 0 30px 0 20px;
+    .list{
+        overflow: hidden;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e7e7e7;
+        h3{
+            font-size: 14px;
+            color: #232323;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        a{
+            float: left;
+            width: 200px;
+            padding: 20px 0;
+            background: #f6f6f6;
+            color: #575859;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+}
+.detail{
+    float: left;
+    width: 32%;
+    text-align: center;
+    margin-bottom: 20px;
+    img{
+        width: 90px;
+        margin: 0 30px;
+    }
+    a{
+        font-size: 14px;
+        color: #5f5f5f;
     }
 }
