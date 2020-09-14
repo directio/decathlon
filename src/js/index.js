@@ -1,117 +1,13 @@
 
 /* 设置左侧导航栏高度与屏幕相同 */ 
 /* $('.cat_wrap').height($(window).height()); */
-/* 获取tab里的数据 */
-class Tab{
-    constructor(){
-        this.init();
-    }
-    init(){
-        $.get('./index.json',(data)=>{
-            let str = `
-                <ul class="clearfix">
-                    <li class="detail">
-                        <img src="${data.tab[0].src}">
-                        <br>
-                        <a href="#">${data.tab[0].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[1].src}">
-                        <br>
-                        <a href="#">${data.tab[1].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[2].src}">
-                        <br>
-                        <a href="#">${data.tab[2].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[0].src}">
-                        <br>
-                        <a href="#">${data.tab[0].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[1].src}">
-                        <br>
-                        <a href="#">${data.tab[1].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[2].src}">
-                        <br>
-                        <a href="#">${data.tab[2].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[0].src}">
-                        <br>
-                        <a href="#">${data.tab[0].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[1].src}">
-                        <br>
-                        <a href="#">${data.tab[1].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[2].src}">
-                        <br>
-                        <a href="#">${data.tab[2].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[0].src}">
-                        <br>
-                        <a href="#">${data.tab[0].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[1].src}">
-                        <br>
-                        <a href="#">${data.tab[1].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[2].src}">
-                        <br>
-                        <a href="#">${data.tab[2].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[0].src}">
-                        <br>
-                        <a href="#">${data.tab[0].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[1].src}">
-                        <br>
-                        <a href="#">${data.tab[1].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[2].src}">
-                        <br>
-                        <a href="#">${data.tab[2].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[0].src}">
-                        <br>
-                        <a href="#">${data.tab[0].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[1].src}">
-                        <br>
-                        <a href="#">${data.tab[1].a}</a>
-                    </li>
-                    <li class="detail">
-                        <img src="${data.tab[2].src}">
-                        <br>
-                        <a href="#">${data.tab[2].a}</a>
-                    </li>
-                </ul>
-            `;
-            let $cat_sublist = $('.cat_sublist');
-            $cat_sublist.eq(0).html(str);
-        })
-    }
-}
+
+
+
 
 /* 点击分类出现左侧选项卡 */
 let is_on = false;
 $('.sort').click(function(){
-    new Tab();
     is_on = !is_on;
     if(is_on){
         $('#tab').css('transform','translateX(0)');
@@ -119,26 +15,123 @@ $('.sort').click(function(){
         $('#tab').css('transform','translateX(-605px)');
     }
 })
+var str1 = '';
+/* 获取tab里的数据 */
+$.get('./index.json',(data)=>{
+    let str = `
+        <ul class="clearfix">
+            <li class="detail">
+                <img src="${data.tab[0].src}">
+                <br>
+                <a href="#">${data.tab[0].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[1].src}">
+                <br>
+                <a href="#">${data.tab[1].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[2].src}">
+                <br>
+                <a href="#">${data.tab[2].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[0].src}">
+                <br>
+                <a href="#">${data.tab[0].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[1].src}">
+                <br>
+                <a href="#">${data.tab[1].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[2].src}">
+                <br>
+                <a href="#">${data.tab[2].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[0].src}">
+                <br>
+                <a href="#">${data.tab[0].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[1].src}">
+                <br>
+                <a href="#">${data.tab[1].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[2].src}">
+                <br>
+                <a href="#">${data.tab[2].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[0].src}">
+                <br>
+                <a href="#">${data.tab[0].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[1].src}">
+                <br>
+                <a href="#">${data.tab[1].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[2].src}">
+                <br>
+                <a href="#">${data.tab[2].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[0].src}">
+                <br>
+                <a href="#">${data.tab[0].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[1].src}">
+                <br>
+                <a href="#">${data.tab[1].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[2].src}">
+                <br>
+                <a href="#">${data.tab[2].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[0].src}">
+                <br>
+                <a href="#">${data.tab[0].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[1].src}">
+                <br>
+                <a href="#">${data.tab[1].a}</a>
+            </li>
+            <li class="detail">
+                <img src="${data.tab[2].src}">
+                <br>
+                <a href="#">${data.tab[2].a}</a>
+            </li>
+        </ul>
+    `;
+    let $cat_sublist = $('.cat_sublist');
+    $cat_sublist.eq(0).html(str);
+    $cat_sublist.eq(0).show();
+})
 
 /* banner左侧内容栏 */
 $(function(){
     /*  鼠标点击左侧内容栏   滑动出弹层 */
-     $('.float').each(function(index,value){
-         $(value).mouseenter(function(){
-             $(this).find('li').addClass("active");
-             $(this).siblings().find('li').removeClass("active");
-             var thisUB = $('.cat_wrap .cat_list .float').index($(this));
-             if($.trim($('.cat_subcont .cat_sublist').eq(thisUB).html()) != ""){
-                 $('.cat_subcont').addClass('active');
-                 $('.cat_sublist').hide();
-                 $('.cat_sublist').eq(thisUB).html();
-                 $('.cat_sublist').eq(thisUB).show();
-             }else{
-                 $('.cat_subcont').removeClass('active');
-             }
-         })
-     })
- })
+    var str1 = '';
+    $('.float').each(function(index,value){
+        $(value).mouseenter(function(){
+            $(this).find('li').addClass("active");
+            $(this).siblings().find('li').removeClass("active");
+            var thisUB = $('.cat_wrap .cat_list .float').index($(this));
+            $('.cat_subcont').addClass('active');
+            $('.cat_sublist').hide();
+            $('.cat_sublist').eq(thisUB).show();
+        })
+    })
+})
 
  /* 首页上边轮播图 */
 $('.swiper-item').width($(window).width());
@@ -194,7 +187,6 @@ $('.swiper-item').width($(window).width());
             if (this.num < 0) {
                 this.num = this.len;
             };
-            console.log(this.num)
             let cssTrx = -this.num * this.w;
             $('.swiper-point-item .point').eq(this.num).addClass('active').siblings().removeClass('active');
             $('.swiper').css({
@@ -225,7 +217,7 @@ class Sport{
     }
     init(){
         $.get('./index.json',(data)=>{
-            console.log(data.sport);
+            /* console.log(data.sport); */
                 let str = `
                 <div class="de-sport">
                     <img src="${data.sport[0].src}" alt="">
