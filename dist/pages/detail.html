@@ -10,11 +10,16 @@
 <body>
     <!-- 头部 -->
     <header></header>
-    <!-- 导航栏 -->
-    <nav>
-        <a href="../index.html">首页 <span class="iconfont icon-icon-right"></span></a><a href="#">所有运动 <span class="iconfont icon-icon-right"></span></a><a href="#">健身 <span class="iconfont icon-icon-right"></span></a><a href="#">有氧健身装备</a>
-    </nav>
+    
     <div id="container">
+        <!-- 导航栏 -->
+        <nav>
+            <a href="../index.html">首页 <span class="iconfont icon-icon-right"></span></a><a href="#">所有运动 <span class="iconfont icon-icon-right"></span></a><a href="#">健身 <span class="iconfont icon-icon-right"></span></a><a href="#">有氧健身装备</a><a href="#" class="last"></a>
+        </nav>
+        <div class="to-cart">
+            <span>您的商品已成功加入</span>
+            <a href="cart.html" class="to_cart">购物车</a>
+        </div>
         <div class="big-img">
             <div class="small-box">
                 <a href="#" class="small-img">
@@ -30,7 +35,7 @@
             </a>
         </div>
         <div class="pro-detail">
-            <div class="pro-content">
+            <div class="pro-content" data-cart-id="sp1">
                 <h2>JR100 跳绳 - 淡紫色</h2>
                 <span class="money">￥8.<b>90</b></span>
                 <span class="iconfont icon-star"></span>
@@ -51,7 +56,7 @@
                 </a><br>
                 <a href="#" class="yh"><img src="../images/yh.jpg" alt="" class="yh">有货</a>
                 <a href="#" class="search">查看门店库存</a><br>
-                <a href="#" class="cart">加入购物车
+                <a href="#" class="cart" data-decathlon-id="sp1">加入购物车
                     <span class="iconfont icon-icon-cart"></span>
                 </a>
                 <div class="cla">
@@ -70,13 +75,26 @@
             </div>
         </div>
     </div>
-    <div class="nav-fix">
-        <a href="#">产品详情</a>
-        <a href="#">推荐搭配</a>
-        <a href="#">顾客评论</a>
+    <div class="nav-prompt">
+        <p>JR100 跳绳</p>
+        <div class="nav-right">
+            <span class="money">￥8.<b>90</b></span>
+            <a href="#">
+                加入购物车
+                <span class="iconfont icon-icon-cart"></span>
+            </a>
+        </div>
     </div>
+    <div class="outer">
+        <div class="nav-fix">
+            <a href="#product-character" class="a1">产品详情</a>
+            <a href="#similary" class="a2">推荐搭配</a>
+            <a href="#customer-comment" class="a3">顾客评论</a>
+        </div>
+    </div>
+    
     <div class="character">
-        <h1>产品特点</h1>
+        <h1 id="product-character">产品特点</h1>
         <div class="character-box">
             <div class="char-s-box">
                 <img src="../images/lz.jpg" alt="">
@@ -146,10 +164,213 @@
             </div>
         </div>
         <div class="command">
-            <h1>相似推荐</h1>
+            <h1 id="similary">相似推荐</h1>
+            <div class="history-wrapper">
+                <a href="#" class="his-box">
+                    <img src="../images/pro1.jpg" alt="">
+                    <h6>Domyos</h6>
+                    <p>T100S 220V跑步机</p>
+                    <span>￥2399.<b>90</b></span>
+                </a>
+                <a href="#" class="his-box">
+                    <img src="../images/pro1.jpg" alt="">
+                    <h6>Domyos</h6>
+                    <p>T100S 220V跑步机</p>
+                    <span>￥2399.<b>90</b></span>
+                </a>
+            </div>
+        </div>
+        <!-- 用户评价 -->
+        <div class="comment-title">
+            <div class="middle">
+                <h3 id="customer-comment">用户评价</h3>
+                <span class="iconfont icon-star"></span>
+                <span class="iconfont icon-star"></span>
+                <span class="iconfont icon-star"></span>
+                <span class="iconfont icon-star"></span>
+                <span class="iconfont icon-star"></span>
+                <i>4.59/5</i>
+                <a href="#" class="right">
+                    <span class="all">所有评论(159)</span>
+                    <span class="iconfont icon-icon-right"></span>
+                </a>
+            </div>
+        </div>
+        <div class="comment-content">
+            <div class="comment-detail">
+                <div class="left">
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="product">JR100跳绳</span>
+                    <p class="content">
+                        都挺好，多点优惠活动更好！谢谢
+                    </p>
+                    <p class="content">
+                        尺码合适，款式新颖，不错
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="#" class="help">
+                        <img src="../images/zan.jpg" alt="">
+                        <span>赞</span>
+                    </a>
+                    <span class="date">2020-09-13</span>
+                    <a href="#" class="notice">举报评论</a>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <div class="left">
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="product">JR100跳绳</span>
+                    <p class="content">
+                        都挺好，多点优惠活动更好！谢谢
+                    </p>
+                    <p class="content">
+                        尺码合适，款式新颖，不错
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="#" class="help">
+                        <img src="../images/zan.jpg" alt="">
+                        <span>赞</span>
+                    </a>
+                    <span class="date">2020-09-13</span>
+                    <a href="#" class="notice">举报评论</a>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <div class="left">
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="product">JR100跳绳</span>
+                    <p class="content">
+                        都挺好，多点优惠活动更好！谢谢
+                    </p>
+                    <p class="content">
+                        尺码合适，款式新颖，不错
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="#" class="help">
+                        <img src="../images/zan.jpg" alt="">
+                        <span>赞</span>
+                    </a>
+                    <span class="date">2020-09-13</span>
+                    <a href="#" class="notice">举报评论</a>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <div class="left">
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="product">JR100跳绳</span>
+                    <p class="content">
+                        都挺好，多点优惠活动更好！谢谢
+                    </p>
+                    <p class="content">
+                        尺码合适，款式新颖，不错
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="#" class="help">
+                        <img src="../images/zan.jpg" alt="">
+                        <span>赞</span>
+                    </a>
+                    <span class="date">2020-09-13</span>
+                    <a href="#" class="notice">举报评论</a>
+                </div>
+            </div>
+            <div class="comment-detail">
+                <div class="left">
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="iconfont icon-star"></span>
+                    <span class="product">JR100跳绳</span>
+                    <p class="content">
+                        都挺好，多点优惠活动更好！谢谢
+                    </p>
+                    <p class="content">
+                        尺码合适，款式新颖，不错
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="#" class="help">
+                        <img src="../images/zan.jpg" alt="">
+                        <span>赞</span>
+                    </a>
+                    <span class="date">2020-09-13</span>
+                    <a href="#" class="notice">举报评论</a>
+                </div>
+            </div> 
+        </div>
+        <div class="history">
+            <div class="out">
+                <h1>历史浏览</h1>
+                <a>删除导航栏历史</a>
+            </div>
+            <div class="history-wrapper">
+                <a href="#" class="his-box">
+                    <img src="../images/pro1.jpg" alt="">
+                    <h6>Domyos</h6>
+                    <p>T100S 220V跑步机</p>
+                    <span>￥2399.<b>90</b></span>
+                </a>
+                <a href="#" class="his-box">
+                    <img src="../images/pro1.jpg" alt="">
+                    <h6>Domyos</h6>
+                    <p>T100S 220V跑步机</p>
+                    <span>￥2399.<b>90</b></span>
+                </a>
+            </div>
         </div>
     </div>
+    <!-- 服务 -->
+    <div class="server">
+
+    </div>
+    <footer></footer>
     <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="../js/detail.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/tools.min.js"></script>
+    <script src="../js/detail.min.js"></script>
+    <script>
+        $('header').load('public.html header',()=>{
+            /* 点击账户 */
+            $('.own').click(function(){
+                location.href = 'register.html';
+            })
+            /* 点击购物车跳转 */
+            $('.to-cart').click(function(){
+                location.href = 'cart.html';
+            })
+
+            /* 购物车数字显示 */
+            let cookie_str = $.cookie('cart') ? $.cookie('cart') : '';
+            let cookie_obj = $toObj(cookie_str);
+            let sum = 0;
+            for(let key in cookie_obj){
+                let good_id = cookie_obj[key];
+                sum += good_id.num;
+            }
+            $('.to-cart b').text(sum);
+        });
+        $('.server').load('public.html #server');
+        $('footer').load('public.html footer');
+    </script>
 </body>
 </html>

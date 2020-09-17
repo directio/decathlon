@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/register2.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
 </head>
 <body>
     <!-- 头部 -->
@@ -13,7 +14,12 @@
     </header>
     <!-- 创建账户主体 -->
     <section>
-        <button type="button" class="back">返回</button>
+        <button type="button" class="back">
+            <span class="iconfont icon-icon-left"></span>&nbsp;&nbsp;
+            返回
+            <div class="mark"></div>
+        </button>
+        
         <h1>创建账户</h1>
         <p class="p">请根据步骤输入您的信息，来创建您的迪卡侬账户</p>
         <div id="box">
@@ -21,21 +27,33 @@
             <span>手机号码*</span>
             <p><input type="text" id="txt" placeholder="| &nbsp;国内手机号码和邮箱"></p> 
             <span>验证码*</span>
-            <p><input type="text" class="text"></p>
+            <p><input type="text" class="text val"></p>
+            <span class="warning1">
+                <span class="triangle"></span>
+                <span class="tip">验证码不能为空</span>
+            </span><br>
             <a href="#">重新发送验证码</a>
             <h3>填写个人信息</h3>
             <span>性别：</span>
             <p class="sex">
-                <label><input type="radio" name="sex"> &nbsp;男士 </label>
+                <label><input type="radio" name="sex" checked> &nbsp;男士 </label>
                 <label><input type="radio" name="sex"> &nbsp;女士</label>
             </p>
             <div class="surname">
                 <span>姓*：</span><br>
-                <input type="text" class="text">    
+                <input type="text" class="text sur-name">   
+                <span class="warning2">
+                    <span class="triangle"></span>
+                    <span class="tip">姓不能为空</span>
+                </span> 
             </div>
             <div class="name">
                 <span>名*：</span><br>
-                <input type="text" class="text">
+                <input type="text" class="text nm">
+                <span class="warning3">
+                    <span class="triangle"></span>
+                    <span class="tip">名不能为空</span>
+                </span>
             </div>
             <h3>设置密码</h3>
             <h2>创建密码</h2>
@@ -47,7 +65,7 @@
                     <span class="triangle"></span>
                     <span class="tip">您的密码必须包含至少8个字符，一个数字，一个英文字母</span>
                 </span>
-                <label for=""><input type="checkbox"> &nbsp;自动登录
+                <label for=""><input type="checkbox" checked> &nbsp;自动登录
                     <!-- <a href=""></a> -->
                 </label>
             </p>
@@ -60,16 +78,16 @@
             <h3>推送优惠及活动</h3>
             <p class="hope">我希望收到迪卡侬及其激情品牌的最新资讯和活动*：</p>
             <p class="is-yes">
-                <label for=""><input type="radio"> 是</label>
+                <label for=""><input type="radio" checked> 是</label>
                 <label for=""><input type="radio"> 否</label>
             </p>
         </div>
     </section>
     <div id="footer">
         <button type="button" class="back">返回</button>
-        <a href="#" class="create">创建账户</a>
+        <a class="create">创建账户</a>
         <p class="read">
-            <input type="checkbox">
+            <input type="checkbox" checked>
              &nbsp;我已阅读并同意<a href="#">迪卡侬会员须知</a>
         </p>
         <p class="id">创建账户，必须填写</p>
@@ -79,6 +97,28 @@
     <script src="../js/jquery.cookie.min.js"></script>
     <script src="../js/tools.min.js"></script>
     <script src="../js/register2.min.js"></script>
+    <script>
+        $('header').load('public.html header',()=>{
+            /* 点击账户 */
+            $('.own').click(function(){
+                location.href = 'register.html';
+            })
+            /* 点击购物车跳转 */
+            $('.to-cart').click(function(){
+                location.href = 'cart.html';
+            })
+
+            /* 购物车数字显示 */
+            let cookie_str = $.cookie('cart') ? $.cookie('cart') : '';
+            let cookie_obj = $toObj(cookie_str);
+            let sum = 0;
+            for(let key in cookie_obj){
+                let good_id = cookie_obj[key];
+                sum += good_id.num;
+            }
+            $('.to-cart b').text(sum);
+        });
+    </script>
 </body>
 
 </html>

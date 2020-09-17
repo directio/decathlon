@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DECATHLON | Login</title>
     <link rel="stylesheet" href="../css/register.min.css">
-    
+    <link rel="stylesheet" href="../css/iconfont.css">
     <script>
         /* $(function(){
             $('header').load('public.html header');
@@ -24,6 +24,10 @@
             <h1>身份验证</h1>
             <p class="prompt">请输入用户名和密码登录，立即享受会员福利。</p>
             <p><input type="text" id="txt" placeholder="| &nbsp;国内手机号码和邮箱"></p> 
+            <span class="warning">
+                <span class="triangle"></span>
+                <span class="tip">请输入正确的手机号码</span>
+            </span>            
             <p><input type="button" id="btn" value="验证手机号" ></p>           
         </form>
         <div id="note">迪卡侬将尽一切可能保护您的个人信息！</div>
@@ -32,5 +36,27 @@
     <script src="../js/jquery.cookie.min.js"></script>
     <script src="../js/tools.min.js"></script>
     <script src="../js/register.min.js"></script>
+    <script>
+        $('header').load('public.html header',()=>{
+            /* 点击账户 */
+            $('.own').click(function(){
+                location.href = 'register.html';
+            })
+            /* 点击购物车跳转 */
+            $('.to-cart').click(function(){
+                location.href = 'cart.html';
+            })
+
+            /* 购物车数字显示 */
+            let cookie_str = $.cookie('cart') ? $.cookie('cart') : '';
+            let cookie_obj = $toObj(cookie_str);
+            let sum = 0;
+            for(let key in cookie_obj){
+                let good_id = cookie_obj[key];
+                sum += good_id.num;
+            }
+            $('.to-cart b').text(sum);
+        });
+    </script>
 </body>
 </html>

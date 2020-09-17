@@ -3,174 +3,256 @@
     <a href="#" class="sort">
         <span class="iconfont icon-icon-sort">&nbsp;&nbsp; 分类</span>
     </a>
-    <img src="images/logo.jpg" alt="">
+    <img src="../images/logo.jpg" alt="">
     <input type="text" placeholder="搜索商品或商品号">
     <button type="button" id="btn">
         <span class="iconfont icon-icon-search"></span>
     </button>
     <div class="list">
-        <a href="#"><span>帮助</span></a>
-        <a href="#"><span>门店</span></a>
-        <a href="#"><span>账户</span></a>
-        <a href="#"><span>购物车</span></a>
+        <a href="#">
+            <span class="iconfont icon-icon-help"></span>
+            <span>帮助</span>
+        </a>
+        <a href="#">
+            <span class="iconfont icon-icon-home"></span>
+            <span>门店</span>
+        </a>
+        <a href="#" class="own">
+            <span class="iconfont icon-icon-person"></span>
+            <span>账户</span>
+        </a>
+        <a href="#" class="to-cart">
+            <span class="iconfont icon-icon-cart"></span>
+            <span>购物车</span>
+            <b>0</b>
+        </a>
     </div>
 </header>
 <!-- 左侧选项卡 -->
-    <!-- banner上面浮层 -->
-    <div id="tab">
-        <div class="cat_wrap">
-            <div class="cat_header">
-                <div class="cat_list">
-                    <div class="float for1">
-                        <ul class="clearfix">
-                            <li class="active">所有运动</li>
-                        </ul>
-                    </div>
-                    <div class="float for2">
-                        <ul class="clearfix">
-                            <li>运动服饰</li>
-                        </ul>
-                    </div>
-                    <div class="float for3">
-                        <ul class="clearfix">
-                            <li>运动鞋袜</li>
-                        </ul>
-                    </div> 
-                    <div class="float for4">
-                        <ul class="clearfix">
-                            <li>运动装备</li>
-                        </ul>
-                    </div> 
-                    <div class="float for5">
-                        <ul class="clearfix">
-                            <li>特惠专区</li>
-                        </ul>
-                    </div> 
-                    <div class="float for6">
-                        <ul class="clearfix">
-                            <li>生态设计</li>
-                        </ul>
-                    </div> 
-                    <div class="float for7">
-                        <ul class="clearfix">
-                            <li>保养维修</li>
-                        </ul>
-                    </div>
-                    <div class="float for8">
-                        <ul class="clearfix">
-                            <li>个性定制</li>
-                        </ul>
+<div id="tab">
+    <div class="cat_wrap">
+        <div class="cat_header">
+            <div class="cat_list">
+                <div class="float for1">
+                    <ul class="clearfix">
+                        <li class="active">所有运动</li>
+                    </ul>
+                </div>
+                <div class="float for2">
+                    <ul class="clearfix">
+                        <li>运动服饰</li>
+                    </ul>
+                </div>
+                <div class="float for3">
+                    <ul class="clearfix">
+                        <li>运动鞋袜</li>
+                    </ul>
+                </div> 
+                <div class="float for4">
+                    <ul class="clearfix">
+                        <li>运动装备</li>
+                    </ul>
+                </div> 
+                <div class="float for5">
+                    <ul class="clearfix">
+                        <li>特惠专区</li>
+                    </ul>
+                </div> 
+                <div class="float for6">
+                    <ul class="clearfix">
+                        <li>生态设计</li>
+                    </ul>
+                </div> 
+                <div class="float for7">
+                    <ul class="clearfix">
+                        <li>保养维修</li>
+                    </ul>
+                </div>
+                <div class="float for8">
+                    <ul class="clearfix">
+                        <li>个性定制</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- banner浮层滑动显示弹框 -->
+        <div class="cat_subcont active">
+            <div class="cat_sublist active">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
+                        
+
                     </div>
                 </div>
             </div>
-            <!-- banner浮层滑动显示弹框 -->
-            <div class="cat_subcont active">
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
+            <div class="cat_sublist">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
+                        <div class="list">
+                            <h3>户外运动</h3>
+                            <a href="#">一日徒步服饰</a>
+                            <a href="#">多日徒步服饰</a>
+                            <a href="#">滑雪服饰</a>
+                            <a href="#">攀岩/高山攀登服饰</a>
+                        </div>
+                        <div class="list">
+                            <h3>室内健身</h3>
+                            <a href="#">健身服饰</a>
+                            <a href="#">普拉提服饰</a>
+                            <a href="#">瑜伽服饰</a>
+                            <a href="#">儿童体能服饰</a>
+                            <a href="#">舞蹈服饰</a>
+                            <a href="#">武术服饰</a>
+                        </div>
+                        <div class="list">
+                            <h3>水上运动</h3>
+                            <a href="#">游泳服饰</a>
+                            <a href="#">冲浪服饰</a>
+                            <a href="#">航海服饰</a>
+                            <a href="#">潜水服饰</a>
+                            <a href="#">皮划艇/SUP桨板服饰</a>
+                            <a href="#">水中有氧服饰</a>
+                        </div>
+                        <div class="list">
+                            <h3>跑步健走</h3>
+                            <a href="#">跑步服饰</a>
+                            <a href="#">健走服饰</a>
+                        </div>
+                        <div class="list">
+                            <h3>团体运动</h3>
+                            <a href="#">足球服饰</a>
+                            <a href="#">篮球服饰</a>
+                            <a href="#">排球服饰</a>
+                            <a href="#">橄榄球服饰</a>
+                            <a href="#">棒球服饰</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cat_sublist">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="cat_sublist">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
 
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
-                            <div class="list">
-                                <h3>户外运动</h3>
-                                <a href="#">一日徒步服饰</a>
-                                <a href="#">多日徒步服饰</a>
-                                <a href="#">滑雪服饰</a>
-                                <a href="#">攀岩/高山攀登服饰</a>
-                            </div>
-                            <div class="list">
-                                <h3>室内健身</h3>
-                                <a href="#">健身服饰</a>
-                                <a href="#">普拉提服饰</a>
-                                <a href="#">瑜伽服饰</a>
-                                <a href="#">儿童体能服饰</a>
-                                <a href="#">舞蹈服饰</a>
-                                <a href="#">武术服饰</a>
-                            </div>
-                            <div class="list">
-                                <h3>水上运动</h3>
-                                <a href="#">游泳服饰</a>
-                                <a href="#">冲浪服饰</a>
-                                <a href="#">航海服饰</a>
-                                <a href="#">潜水服饰</a>
-                                <a href="#">皮划艇/SUP桨板服饰</a>
-                                <a href="#">水中有氧服饰</a>
-                            </div>
-                            <div class="list">
-                                <h3>跑步健走</h3>
-                                <a href="#">跑步服饰</a>
-                                <a href="#">健走服饰</a>
-                            </div>
-                            <div class="list">
-                                <h3>团体运动</h3>
-                                <a href="#">足球服饰</a>
-                                <a href="#">篮球服饰</a>
-                                <a href="#">排球服饰</a>
-                                <a href="#">橄榄球服饰</a>
-                                <a href="#">棒球服饰</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
+                
+            </div>
+            <div class="cat_sublist">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
 
-                        </div>
                     </div>
-                    
                 </div>
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
+                
+            </div>
+            <div class="cat_sublist">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
 
-                        </div>
                     </div>
-                    
                 </div>
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
+                
+            </div>
+            <div class="cat_sublist">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
 
-                        </div>
                     </div>
-                    
                 </div>
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
+                
+            </div>
+            <div class="cat_sublist">
+                <!-- 浮层左边列表 -->
+                <div class="fore1">
+                    <div class="fore_list">
 
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="cat_sublist">
-                    <!-- 浮层左边列表 -->
-                    <div class="fore1">
-                        <div class="fore_list">
-
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- 服务 -->
+<div id="server">
+    <ul>
+        <li>
+            <span class="iconfont icon-icon-comment"></span>&nbsp;&nbsp;
+            <a href="#">用户评价</a>
+        </li>
+        <li>
+            <span class="iconfont icon-icon-home"></span>&nbsp;&nbsp;
+            <a href="#">门店自提</a>
+        </li>
+        <li>
+            <span class="iconfont icon-icon-vip"></span>&nbsp;&nbsp;
+            <a href="#">会员福利</a>
+        </li>
+        <li>
+            <span class="iconfont icon-icon-room"></span>&nbsp;&nbsp;
+            <a href="#">工作室</a>
+        </li>
+        <li>
+            <span class="iconfont icon-icon-change"></span>&nbsp;&nbsp;
+            <a href="#">退换货保障</a>
+        </li>
+    </ul>
+</div>
+<!-- footer -->
+<footer>
+    <div id="footerTop">
+        <ul class="small-ul">
+            <h3 class="small-title">关于迪卡侬</h3>
+            <li><a href="#">品牌故事</a></li>
+            <li><a href="#">工作机遇</a></li>
+            <li><a href="#">迪卡侬可持续发展</a></li>
+        </ul>
+        <ul class="small-ul">
+            <h3 class="small-title">我们的服务</h3>
+            <li><a href="#">退换货政策</a></li>
+            <li><a href="#">配送方式</a></li>
+            <li><a href="#">工作室</a></li>
+            <li><a href="#">门店自提</a></li>
+            <li><a href="#">团购</a></li>
+            <li><a href="#">礼品卡</a></li>
+        </ul>
+        <ul class="small-ul">
+            <h3 class="small-title">帮助</h3>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">会员权益</a></li>
+            <li><a href="#">客服电话 4009-109-109</a></li>
+        </ul>
+        <ul class="small-ul">
+            <h3 class="small-title">合法</h3>
+            <li><a href="#">营业执照</a></li>
+            <li><a href="#">隐私政策</a></li>
+            <li><a href="#">会员须知</a></li>
+            <li><a href="#">官网购物须知</a></li>
+        </ul>
+        <div class="code">
+            <img src="../images/code.jpg" alt="">
+            <h3 class="attention">关注迪卡侬</h3>
+        </div>
+    </div>
+    <div id="footerBottom">
+        <div id="footerRight">
+            <p>Copyright 2003- 2020 , 迪卡侬集团及其附属公司。 <span>沪ICP备16000315号-7</span></p>
+            <img src="../images/police1.png" alt="" class="police1">
+            <img src="../images/police2.png" alt="" class="police2">
+        </div>
+    <p class="footerLeft">所有产品价格均包含增值税。</p>
+    </div>
+</footer>

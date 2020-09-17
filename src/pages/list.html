@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="../css/iconfont.css">
 </head>
 <body>
-    <header></header>
+    <!-- 头部 -->
+    <header>
+    </header>
+    <!-- 左侧导航栏 -->
+    <div class="tab"></div>
     <!-- 导航 -->
     <nav>
-        <a href="../index.html">首页 <span class="iconfont icon-icon-right"></span></a><a href="#">所有运动 <span class="iconfont icon-icon-right"></span></a><a href="#">健身 <span class="iconfont icon-icon-right"></span></a><a href="#">有氧健身装备</a>
+        <a href="../index.html">首页 <span class="iconfont icon-icon-right"></span></a><a href="#">所有运动 <span class="iconfont icon-icon-right"></span></a><a href="#">健身 <span class="iconfont icon-icon-right"></span></a><a href="#">有氧健身装备</a><a href="#" class="last"></a>
     </nav>
     <!-- 左侧筛选栏 -->
     <article>
@@ -1121,7 +1125,7 @@
                     </li>
             </div>
         </div>
-        <a href="#" class="btn">
+        <a href="#" class="btn open">
             展开接下来2个产品
         </a>
         <div class="star">
@@ -1153,9 +1157,38 @@
             </div>
         </div>
     </div>
+    <!-- 服务 -->
+    <div class="server">
+
+    </div>
+    <footer></footer>
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/jquery.cookie.min.js"></script>
-    <script src="../js/list.min.js"></script>
     <script src="../js/tools.min.js"></script>
+    <script src="../js/list.min.js"></script>
+    <script>
+        $('header').load('public.html header',()=>{
+            /* 点击账户 */
+            $('.own').click(function(){
+                location.href = 'register.html';
+            })
+            /* 点击购物车跳转 */
+            $('.to-cart').click(function(){
+                location.href = 'cart.html';
+            })
+
+            /* 购物车数字显示 */
+            let cookie_str = $.cookie('cart') ? $.cookie('cart') : '';
+            let cookie_obj = $toObj(cookie_str);
+            let sum = 0;
+            for(let key in cookie_obj){
+                let good_id = cookie_obj[key];
+                sum += good_id.num;
+            }
+            $('.to-cart b').text(sum);
+        });
+        $('.server').load('public.html #server');
+        $('footer').load('public.html footer');
+    </script>
 </body>
 </html>

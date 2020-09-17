@@ -22,23 +22,9 @@ img{
 body{
     overflow-x: hidden;
 }
-/* 头部弹出的信息框 */
-#text{
-    @include size(100%,#323233);
-    height: 37px;
-    color: white;
-    text-align: center;
-    font-size: 12px;
-    line-height: 37px;
-}
-#close{
-    margin-right: 10px;
-    color: white;
-    float: right;
-    border: none;
-    height: 100%;
-    background: #323233;
-    outline: none;
+/* IE不支持 */
+body,html{
+    scroll-behavior: smooth;
 }
 /* 头部 */
 header{
@@ -47,6 +33,7 @@ header{
     @include size(100%,white);
     height: 54px;
     color: #575859;
+    box-shadow: 0px 8px 5px -5px darkgrey;
     #tab{
         overflow: hidden;
         width: 600px;
@@ -98,6 +85,7 @@ header{
         color: gainsboro;
     }
     #btn{
+        cursor: pointer;
         outline: none;
         @include size(54px,white);
         height: 35px;
@@ -125,12 +113,27 @@ header{
             float: left;
             border-left: 1px solid #edeff1;
             text-align: center;
-            line-height: 54px;
+            position: relative;
+            padding-top: 15px;
             span{
                 display: inline-block;
                 transform: skew(-10deg);
                 font-size: 13px;
                 color: #575859;
+            }
+            b{
+                transform: skew(-10deg);
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background: #0082c3;
+                position: absolute;
+                right: 10px;
+                top: 3px;
+                border-radius: 50%;
+                font-size: 5px;
+                color: white;
+                line-height: 17px;
             }
         }
         a:nth-child(4){
@@ -138,10 +141,15 @@ header{
             background: #ffea28;
             color: #323233;
         }
+        a:hover{
+            background: #edeff1;
+        }
+        a:nth-child(4):hover{
+            background: #fdd935;
+        }
     }
 }
 /* 左侧选项卡 */
-
 a,li {
     list-style:none;
 }
@@ -263,5 +271,101 @@ a,li {
     a{
         font-size: 14px;
         color: #5f5f5f;
+    }
+}
+/* 服务 */
+#server{
+    margin-top: 80px;
+    @include size(100%,#0082c3);
+    height: 75px;
+    ul{
+        width: 1180px;
+        margin: 0 auto;
+        li{
+            width: 224px;
+            height: 100%;
+            float: left;
+            font-weight: 700;
+            line-height: 75px;
+            a{
+                color: white;
+                vertical-align: middle;
+            }
+            span{
+                font-weight: 700;
+                color: white;
+                font-size: 30px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+/* footer */
+footer{
+    @include size(100%,#edeff1);
+    #footerTop{
+        width: 1180px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-bottom: 1px solid #e7e6e6;
+        padding-bottom: 50px;
+        .small-ul{
+            float: left;
+            width: 18%;
+            margin-left: 30px;
+            .small-title{
+                color: #0082c3;
+                font-weight: 700;
+                font-size: 14px;
+                margin-top: 40px;
+                margin-bottom: 5px;
+            }
+            li a{
+                color: #575859;
+                font-size: 12px;
+            }
+        }
+        .code{
+            float: left;
+            margin-top: 40px;
+            .attention{
+                font-size: 14px;
+                color: #393939;
+                font-weight: 700;
+                text-indent: 12px;
+                padding-top: 10px;
+            }
+            img{
+                width: 100px;
+                display: block;
+            }
+        }
+    }
+    #footerBottom{
+        width: 1180px;
+        margin: 0 auto;
+        margin-top: 90px;
+        padding-bottom: 16px;
+        #footerRight{
+            text-align: right;
+            margin-bottom: 50px;
+            p{
+                font-size: 12px;
+                margin-bottom: 10px;
+                span{
+                    color: #575859;
+                }
+            }
+            .police1{
+                width: 41px;
+            }
+            .police2{
+                height: 41px;
+            }
+        }
+    }
+    .footerLeft{
+        font-size: 12px;
     }
 }

@@ -2,15 +2,24 @@
 /* 导航 */
 nav{
     width: 100%;
+    position: relative;
     a{
         padding: 5px 17px;
         color: white;
         font-size: 11px;
-        background: rgba(50,50,51,.7);
+        background: #888888;
         line-height: 34px;
         span{
             line-height: 34px;
         }
+    }
+    .last{
+        height: 15.5px;
+        display: inline-block;
+        transform: skew(-15deg);
+        position: absolute;
+        top: 5px;
+        left: 330px;
     }
 }
 /* 左侧筛选栏 */
@@ -18,10 +27,9 @@ article{
     width: 22%;
     height: 600px;
     float: left;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     margin-right: 15px;
-    border-bottom: 1px solid #edeff1;
     .select{
         font-size: 14px;
         color: #323233;
@@ -262,6 +270,7 @@ section{
     clear: both;
     padding-top: 80px;
     overflow: hidden;
+    padding-bottom: 10px;
     .out{
         overflow: hidden;
         width: 70%;

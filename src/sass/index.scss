@@ -1,4 +1,5 @@
 @import 'public';
+
 /* 轮播图 */
 .swiper-contione {
     width: 100%;
@@ -11,7 +12,6 @@
     height: 590px;
     transition: all 1s ease;
 }
-
 .swiper-item {
     height: 590px;
     float: left;
@@ -85,6 +85,7 @@ section{
         width: 1200px;
         margin: 0 auto;
         margin-bottom: 20px;
+        height: 504px;
         .de-sport{
             margin-bottom: 20px;
             position: relative;
@@ -115,6 +116,9 @@ section{
                         color: #5a5a5a;
                         cursor: pointer;
                         line-height: 28px;
+                        a{
+                            color: #5a5a5a;
+                        }
                     }
                     li:hover{   
                         background:lightgray;
@@ -134,7 +138,7 @@ section{
         margin: 0 auto;
         color: white;
         text-align: center;
-        padding: 12px 43px;
+        padding: 6px;
         font-weight: 700;
         line-height: 33px;
     }
@@ -201,6 +205,7 @@ section{
                     background: #ffe928;
                     line-height: 30px;
                     font-weight: 700;
+                    color: #232323;
                     b{
                         font-size: 12px;
                     }
@@ -247,8 +252,9 @@ section{
     text-align: center;
     ul{
         width: 1180px;
-        overflow: hidden;
         margin: 0 auto;
+        overflow: hidden;
+        padding-top: 10px;
         li{
             width: 184px;
             height: 44px;
@@ -256,12 +262,39 @@ section{
             float: left;
             margin-right: 10px;
             text-align: center;
-            line-height: 44px;
             transition: all .5s;
+            position: relative;
             cursor: pointer;
+            .pre{
+                color:  #e20c18;
+            }
             a{
+                display: block;
                 font-weight: 700;
                 color: #393939;
+                margin-top: 10px;
+            }
+            .tip{
+                position: absolute;
+                right: -5px;
+                top: -5px;
+                width: 26px;
+                height: 16px;
+                background: #e20c18;
+                font-size: 10px;
+                color: white;
+                line-height: 16px;
+                .tri{
+                    position: absolute;
+                    top: 16px;
+                    left: 6px;
+                    width: 0;
+                    height: 0;
+                    border-left: 3px solid #e20c18;
+                    border-top: 3px solid #e20c18;
+                    border-right: 3px solid transparent;
+                    border-bottom: 3px solid transparent;
+                }
             }
         }
         li:hover{
@@ -269,7 +302,6 @@ section{
         }
     }
 }
-
 
 /* 猜你喜欢 */
 #guessLike{
@@ -323,11 +355,17 @@ section{
             @include size(260px,#0082c3);
             clear: both;
             display: block;
-            padding: 10px;
+            padding: 10px 0;
             color: white;
             margin: 50px auto 0;
             height: 30px;
             line-height: 30px;
+            font-weight: 700;
+            span{
+                font-size: 20px;
+                float: right;
+                padding-right: 15px;
+            }
         }
         .img-box{
             margin-top: 65px;

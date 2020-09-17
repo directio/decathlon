@@ -19,14 +19,26 @@
             <span class="iconfont icon-icon-search"></span>
         </button>
         <div class="list">
-            <a href="#"><span>帮助</span></a>
-            <a href="#"><span>门店</span></a>
-            <a href="#"><span>账户</span></a>
-            <a href="#"><span>购物车</span></a>
+            <a href="#">
+                <span class="iconfont icon-icon-help"></span>
+                <span>帮助</span>
+            </a>
+            <a href="#">
+                <span class="iconfont icon-icon-home"></span>
+                <span>门店</span>
+            </a>
+            <a href="#" class="own">
+                <span class="iconfont icon-icon-person"></span>
+                <span>账户</span>
+            </a>
+            <a href="#" class="to-cart">
+                <span class="iconfont icon-icon-cart"></span>
+                <span>购物车</span>
+                <b>0</b>
+            </a>
         </div>
     </header>
     <!-- 左侧选项卡 -->
-    <!-- banner上面浮层 -->
     <div id="tab">
         <div class="cat_wrap">
             <div class="cat_header">
@@ -79,10 +91,10 @@
                     <!-- 浮层左边列表 -->
                     <div class="fore1">
                         <div class="fore_list">
+                            
 
                         </div>
                     </div>
-                    
                 </div>
                 <div class="cat_sublist">
                     <!-- 浮层左边列表 -->
@@ -231,7 +243,7 @@
     <div id="sport">
 
     </div>
-    <a href="#" class="more-sport">查看所有运动</a>
+    <a class="more-sport">查看所有运动</a>
 </section>
 <!-- 额外信息 -->
 <div id="benefitFloor">
@@ -246,8 +258,8 @@
     <div class="col-box">
         <a href="#"><img src="images/col1.jpg" alt=""></a>
         <div class="col-right">
-            <a href="#" class="col-detail">
-                <img src="./images/cols1.jpg" alt="">
+            <a href="./pages/detail.html" class="col-detail">
+                <img src="./images/sz.jpg" alt="">
                 <h6 class="s-title">NYAMBA</h6>
                 <p>女士基础健身紧身裤 Fit+500 -黑色</p>
                 <span>￥59.<b>90</b></span>
@@ -360,7 +372,11 @@
     <h1 class="big-title">侬粉热搜</h1>
     <ul>
         <li>
-            <a href="#">#防晒</a>
+            <a href="#" class="pre">#防晒</a>
+            <div class="tip">
+                <span>HOT</span>
+                <span class="tri"></span>
+            </div>
         </li>
         <li>
             <a href="#">#短裤</a>
@@ -423,7 +439,9 @@
                 <p>女士基础健身紧身裤 Fit+500 -黑色</p>
                 <span>￥59.<b>90</b></span>
         </a>
-        <a href="#" class="more">查看更多</a>
+        <a href="#" class="more">查看更多
+            <span class="iconfont icon-icon-right"></span>
+        </a>
         <div class="img-box">
             <a href="#"><img src="images/like1.jpg" alt=""></a>
             <a href="#"><img src="images/like2.jpg" alt=""></a>
@@ -502,9 +520,12 @@
         </div>
     <p class="footerLeft">所有产品价格均包含增值税。</p>
     </div>
-    </footer>
+</footer>
     
     <script src="../dist/js/jquery-1.12.4.min.js"></script>
+    <script src="../dist/js/jquery.cookie.min.js"></script>
+    <script src="../dist/js/tools.min.js"></script>
+    <script src="../dist/js/public.min.js"></script>
     <script src="../dist/js/index.min.js"></script>
 </body>
 </html>

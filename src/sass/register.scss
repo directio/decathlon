@@ -18,6 +18,33 @@ body{
         h1{
             font-style: italic;
         }
+        .warning{
+            width: 300px;
+            position: relative;
+            font-size: 12px;
+            display: none;
+            .triangle{
+                position: absolute;
+                left: 30px;
+                top: -10px;
+                width: 0;
+                height: 0;
+                float: left;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid #e20c18;
+            }
+            .tip{
+                float: left;
+                display: block;
+                background: #e20c18;
+                color: white;
+                width: 276px;
+                padding: 8px;
+                margin-bottom: 10px;
+            }
+        }
         .prompt{
             font-size: 12px;
             margin: 5px 0 12px;
@@ -26,7 +53,7 @@ body{
             width: 240px;
             height: 40px;
             border: 1px solid #d4d7d9;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             background: url(../images/flag.jpg) no-repeat 8px center;
             background-size: 30px;
             padding-left: 50px;

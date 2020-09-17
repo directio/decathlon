@@ -5,38 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/cart.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
 </head>
 <body>
     <!-- 头部 -->
     <header>
-        <a href="#" class="continue-shop">继续购物</a>
+        <a href="#" class="continue-shop">
+            <span class="iconfont icon-icon-left"></span>
+            <b>继续购物</b>
+        </a>
         <img src="../images/logo.jpg" alt="">
         <p class="protect"><span>100%</span> 受保护</p>
     </header>
-    <!-- 导航栏 -->
-    <nav>
-        <span>1.购物车详情</span>
-        <span>2.登录/注册</span>
-        <span>3.配送方式</span>
-        <span>4.支付</span>
-    </nav>
-    <!-- 商品详细信息 -->
-    <section>
-        <div class="product">产品</div>
-            <div>单价</div>
-            <div>数量</div>
-            <div>总价</div>
-        <div class="detail">
-            
+    <div class="content">
+        <div class="box">
+            <!-- 导航栏 -->
+            <nav>
+                <span class="span1">1.购物车详情</span>
+                <span>2.登录/注册</span>
+                <span>3.配送方式</span>
+                <span>4.支付</span>
+            </nav>
+            <section>
+                <div class="cart-empty">
+                    <img src="../images/cart.jpg" alt="">
+                    <p>您的购物车是空的</p>
+                    <p>继续购物</p>
+                    <a href="#" class="empty">
+                        <span class="iconfont icon-icon-left"></span>
+                        继续购物
+                    </a>
+                </div>
+                <div class="container">
+                    <!-- <div class="product">产品</div>
+                    <div class="div">单价</div>
+                    <div class="div">数量</div>
+                    <div class="div">总价</div>
+                    <div class="detail" data-decathlon-id="sp1">
+                        <img src="../images/shoe.jpg" alt="">
+                        <div class="info">
+                            <h3>KALENJI</h3>
+                            <p class="type">男士基础款轻盈慢跑鞋</p>
+                            <h4>货号：2005494</h4>
+                            <p>颜色：浅灰色</p>
+                            <p>-尺寸：39码</p>
+                            <a href="#">修改 | 加入收藏夹</a>
+                        </div>
+                        <strong>￥79.90</strong>
+                        <div class="num">
+                            <input type="button" value="-" class="minus">
+                            <input type="text" class="txt" value="1">
+                            <input type="button" value="+" class="plus">
+                        </div>
+                        <strong>￥79.90</strong>
+                        <input type="button" value="×" class="del">
+                    </div> -->
+                </div>
+                <div class="sum">
+                    <h2>订单汇总</h2>
+                    <p>
+                        <span class="pro-sum">商品总额</span>
+                        <span class="money">￥0.00</span>
+                    </p>
+                    <p>
+                        <a href="#">输入优惠券码</a>
+                        <span class="iconfont icon-icon-help"></span>
+                    </p>
+                    <p class="third">
+                        <span class="all">订单总额</span>
+                        <span class="big-money">￥0.00</span>
+                    </p>
+                    <a class="cal">结算
+                        <span class="iconfont icon-icon-right"></span>
+                    </a>
+                </div>
+            </section>
+            <!-- 收藏夹 -->
+            <div class="collect">
+                <h1>收藏夹</h1>
+                <div class="collect-box">
+                    没有产品 收藏
+                </div>
+            </div>
         </div>
-        <div id="action">
-            <a href="#" class="continue-shop">继续购物</a>
-            <span>订单总额：</span>
-            <button type="button">结算</button>
-        </div>
-        <div class="sum">
-            
-        </div>
-    </section>
+    </div>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/tools.min.js"></script>
+    <script src="../js/cart.min.js"></script>
 </body>
 </html>

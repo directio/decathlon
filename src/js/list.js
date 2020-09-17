@@ -1,24 +1,61 @@
-$('.tabbox .content li:eq(0)').show();
 
+/* 点击商品进入详情页 */
+let $product = $('.product');
+$product.each((index,value)=>{
+	$(value).click(function(){
+		location.href = 'detail.html';
+	})
+})
+
+/* 点击分类出现左侧选项卡 */
+let is_on = false;
+$('.sort').click(function(){
+    $('.cat_sublist').each(function(index,value){
+        $(value).hide();
+    })
+    $('.cat_sublist').eq(0).show();
+    is_on = !is_on;
+    if(is_on){
+        $('#tab').css('transform','translateX(0)');
+    }else{
+        $('#tab').css('transform','translateX(-605px)');
+    }
+})
+
+/*  鼠标点击左侧内容栏   滑动出弹层 */
+$('.float').each(function(index,value){
+    $(value).click(function(){
+        $(this).find('li').addClass("active");
+        $(this).siblings().find('li').removeClass("active");
+        var thisUB = $('.float').index($(this));
+        $('.cat_subcont').addClass('active');
+        $('.cat_sublist').hide();
+        $('.cat_sublist').eq(thisUB).show();
+    })
+})
+$('.tabbox .content li:eq(0)').show();
 /* 左侧工具栏滚动 */
 /* 滚动距离小于头部加导航栏高度，或者大于右侧商品栏高度，正常滚动 */
 $(window).scroll(function(){
-    if($(this).scrollTop() > $('header').outerHeight() + $('nav').outerHeight() && $(this).scrollTop() < $('section').outerHeight() - 230){
-        $('article').css({
-            position : 'fixed',
-            top : 0,
-        });
-        $('article').css('margin-top','0px');
-        $('section').css('margin-left','23%');
-    }else if($(this).scrollTop() <= $('header').outerHeight() + $('nav').outerHeight()){
-        $('article').css('position','static');
-        $('article').css('margin-top','0px');
-        $('section').css('margin-left','0px');
-    }else if($(this).scrollTop() > $('section').outerHeight() - 230){
-        $('article').css('position','static');
-        $('article').css('margin-top',$('section').outerHeight() - 720);
-        $('section').css('margin-left','0px');
-    }
+	if($(this).scrollTop() > $('.c').offset().top && $(this).scrollTop() < $('.open').offset().top - 620){
+		$('article').css({
+			position : 'fixed',
+			top : 0
+		})
+		$('section').css('margin-left','23%');
+	}else if($(this).scrollTop() <= $('.c').offset().top){
+		$('article').css({
+			position : 'static',
+		})
+		$('section').css('margin-left','0');
+	}else if($(this).scrollTop() > $('.open').offset().top - 620){
+		$('article').css({
+			position : 'absolute',
+			top : '1368px',
+			left : '0'
+		})
+		$('section').css('margin-left','23%');
+	}
 })
 
 

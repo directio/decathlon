@@ -1,138 +1,4 @@
 
-/* 设置左侧导航栏高度与屏幕相同 */ 
-/* $('.cat_wrap').height($(window).height()); */
-
-
-
-
-/* 点击分类出现左侧选项卡 */
-let is_on = false;
-$('.sort').click(function(){
-    is_on = !is_on;
-    if(is_on){
-        $('#tab').css('transform','translateX(0)');
-    }else{
-        $('#tab').css('transform','translateX(-605px)');
-    }
-})
-var str1 = '';
-/* 获取tab里的数据 */
-$.get('./index.json',(data)=>{
-    let str = `
-        <ul class="clearfix">
-            <li class="detail">
-                <img src="${data.tab[0].src}">
-                <br>
-                <a href="#">${data.tab[0].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[1].src}">
-                <br>
-                <a href="#">${data.tab[1].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[2].src}">
-                <br>
-                <a href="#">${data.tab[2].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[0].src}">
-                <br>
-                <a href="#">${data.tab[0].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[1].src}">
-                <br>
-                <a href="#">${data.tab[1].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[2].src}">
-                <br>
-                <a href="#">${data.tab[2].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[0].src}">
-                <br>
-                <a href="#">${data.tab[0].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[1].src}">
-                <br>
-                <a href="#">${data.tab[1].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[2].src}">
-                <br>
-                <a href="#">${data.tab[2].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[0].src}">
-                <br>
-                <a href="#">${data.tab[0].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[1].src}">
-                <br>
-                <a href="#">${data.tab[1].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[2].src}">
-                <br>
-                <a href="#">${data.tab[2].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[0].src}">
-                <br>
-                <a href="#">${data.tab[0].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[1].src}">
-                <br>
-                <a href="#">${data.tab[1].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[2].src}">
-                <br>
-                <a href="#">${data.tab[2].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[0].src}">
-                <br>
-                <a href="#">${data.tab[0].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[1].src}">
-                <br>
-                <a href="#">${data.tab[1].a}</a>
-            </li>
-            <li class="detail">
-                <img src="${data.tab[2].src}">
-                <br>
-                <a href="#">${data.tab[2].a}</a>
-            </li>
-        </ul>
-    `;
-    let $cat_sublist = $('.cat_sublist');
-    $cat_sublist.eq(0).html(str);
-    $cat_sublist.eq(0).show();
-})
-
-/* banner左侧内容栏 */
-$(function(){
-    /*  鼠标点击左侧内容栏   滑动出弹层 */
-    var str1 = '';
-    $('.float').each(function(index,value){
-        $(value).mouseenter(function(){
-            $(this).find('li').addClass("active");
-            $(this).siblings().find('li').removeClass("active");
-            var thisUB = $('.cat_wrap .cat_list .float').index($(this));
-            $('.cat_subcont').addClass('active');
-            $('.cat_sublist').hide();
-            $('.cat_sublist').eq(thisUB).show();
-        })
-    })
-})
-
  /* 首页上边轮播图 */
 $('.swiper-item').width($(window).width());
  class Swiper {
@@ -217,176 +83,34 @@ class Sport{
     }
     init(){
         $.get('./index.json',(data)=>{
-            /* console.log(data.sport); */
+            console.log(data.sport);
+            data.sport.forEach((value,index)=>{
                 let str = `
                 <div class="de-sport">
-                    <img src="${data.sport[0].src}" alt="">
-                    <p>${data.sport[0].title}</p>
+                    <img src="${data.sport[index].src}" alt="">
+                    <p>${data.sport[index].title}</p>
                     <div class="mark">
-                        <h2>${data.sport[0].title}</h2>
+                        <h2>${data.sport[index].title}</h2>
                         <ul class="list">
-                            <li>${data.sport[0].li1}</li>
-                            <li>${data.sport[0].li2}</li>
-                            <li>${data.sport[0].li3}</li>
-                            <li>${data.sport[0].li4}</li>
+                            <li><a href="#">${data.sport[index].li1}</a></li>
+                            <li><a href="#">${data.sport[index].li2}</a></li>
+                            <li><a href="#">${data.sport[index].li3}</a></li>
+                            <li><a href="#">${data.sport[index].li4}</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="de-sport">
-                    <img src="${data.sport[1].src}" alt="">
-                    <p>${data.sport[1].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[1].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[1].li1}</li>
-                            <li>${data.sport[1].li2}</li>
-                            <li>${data.sport[1].li3}</li>
-                        </ul>
-                    </div>
-                </div>
-                    
-                <div class="de-sport">
-                    <img src="${data.sport[2].src}" alt="">
-                    <p>${data.sport[2].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[2].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[2].li1}</li>
-                            <li>${data.sport[2].li2}</li>
-                            <li>${data.sport[2].li3}</li>
-                            <li>${data.sport[2].li4}</li>
-                            <li>${data.sport[2].li5}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[3].src}" alt="">
-                    <p>${data.sport[3].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[3].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[2].li1}</li>
-                            <li>${data.sport[2].li2}</li>
-                            <li>${data.sport[2].li3}</li>
-                            <li>${data.sport[2].li4}</li>
-                            <li>${data.sport[2].li5}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[4].src}" alt="">
-                    <p>${data.sport[4].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[4].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[4].li1}</li>
-                            <li>${data.sport[4].li2}</li>
-                            <li>${data.sport[4].li3}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[5].src}" alt="">
-                    <p>${data.sport[2].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[2].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[5].li1}</li>
-                            <li>${data.sport[5].li2}</li>
-                            <li>${data.sport[5].li3}</li>
-                            <li>${data.sport[5].li4}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[3].src}" alt="">
-                    <p>${data.sport[3].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[3].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[5].li1}</li>
-                            <li>${data.sport[5].li2}</li>
-                            <li>${data.sport[5].li3}</li>
-                            <li>${data.sport[5].li4}</li>
-                            <li>${data.sport[5].li5}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[0].src}" alt="">
-                    <p>${data.sport[0].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[0].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[5].li1}</li>
-                            <li>${data.sport[5].li2}</li>
-                            <li>${data.sport[5].li3}</li>
-                            <li>${data.sport[5].li4}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[1].src}" alt="">
-                    <p>${data.sport[1].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[1].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[5].li1}</li>
-                            <li>${data.sport[5].li2}</li>
-                            <li>${data.sport[5].li3}</li>
-                            <li>${data.sport[5].li4}</li>
-                            <li>${data.sport[5].li5}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[2].src}" alt="">
-                    <p>${data.sport[2].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[2].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[5].li1}</li>
-                            <li>${data.sport[5].li2}</li>
-                            <li>${data.sport[5].li3}</li>
-                            <li>${data.sport[5].li4}</li>
-                            <li>${data.sport[5].li5}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[3].src}" alt="">
-                    <p>${data.sport[3].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[3].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[5].li1}</li>
-                            <li>${data.sport[5].li2}</li>
-                            <li>${data.sport[5].li3}</li>
-                            <li>${data.sport[5].li4}</li>
-                            <li>${data.sport[5].li5}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="de-sport">
-                    <img src="${data.sport[4].src}" alt="">
-                    <p>${data.sport[4].title}</p>
-                    <div class="mark">
-                        <h2>${data.sport[4].title}</h2>
-                        <ul class="list">
-                            <li>${data.sport[5].li1}</li>
-                            <li>${data.sport[5].li2}</li>
-                            <li>${data.sport[5].li3}</li>
-                            <li>${data.sport[5].li4}</li>
-                            <li>${data.sport[5].li5}</li>
-                        </ul>
-                    </div>
-                </div>    
                 `;
-            $('#sport').html(str);
+            $('#sport').append(str);
+            })
         })
     } 
 }
 new Sport();
+/* 点击更多运动加载更多 */
+$('.more-sport').click(function(){
+    $('#sport').css('height','auto');
+    $(this).hide();
+})
 
 
 

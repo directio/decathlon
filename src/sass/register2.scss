@@ -2,16 +2,29 @@
 body{
     background: #edeff1;
 }
-input{
-    outline: none;
-}
 /* 创建账户主体部分 */
 .back{
-    padding: 8px 30px 8px 45px;
+    padding: 8px 20px 8px 20px;
     background: #d4d7d9;
     border: none;
     font: 12px/16px "Roboto-condensed,Arial Narrow";
     font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    span{
+        float: left;
+    }
+    .mark{
+        position: absolute;
+        left: -85px;
+        top: 50px;
+        width: 200px;
+        height: 60px;
+        background: rgba(175,177,179,.3);
+        transform: rotate(50deg);
+    }
 }
 section{
     @include size(950px,#edeff1);
@@ -29,6 +42,9 @@ section{
         margin-bottom: 10px;
     }
     #box{
+        input{
+            outline: none;
+        }
         margin-right: 0;
         color: #323233;
         @include size(850px, white);
@@ -56,6 +72,45 @@ section{
             background-size: 30px;
             padding-left: 50px;
             font-size: 14px;
+        }
+        .warning1,.warning2,.warning3{
+            width: 280px;
+            position: relative;
+            overflow: hidden;
+            display: none;
+            .triangle{
+                position: absolute;
+                left: 30px;
+                top: -5px;
+                width: 0;
+                height: 0;
+                float: left;
+                border: {
+                    style : solid;
+                    width: 5px;
+                    left : {
+                        color: transparent;
+                    }
+                    right : {
+                        color: transparent;
+                    }
+                    top : {
+                        color: transparent;
+                    }
+                    bottom : {
+                        color : #e20c18;
+                    }
+                }
+            }
+            .tip{
+                float: left;
+                display: block;
+                background: #e20c18;
+                color: white;
+                width: 276px;
+                padding: 8px;
+                margin-top: 5px;
+            }
         }
         .text{
             width: 275px;
