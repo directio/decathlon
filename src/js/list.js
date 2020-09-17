@@ -80,3 +80,7 @@ $(function(){
 		}
 	}
 });
+/* 删除导航栏历史 */
+$('.out a').click(function(){
+    $('.history').hide();
+})

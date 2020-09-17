@@ -275,6 +275,8 @@ a,li {
 }
 /* 服务 */
 #server{
+    clear: both;
+    overflow: hidden;
     margin-top: 80px;
     @include size(100%,#0082c3);
     height: 75px;

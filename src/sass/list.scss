@@ -46,6 +46,7 @@ article{
         height: 52px;
         border: 1px solid #edeff1;
         padding-left: 30px;
+        cursor: pointer;
         a{
             font-size: 12px;
             font-weight: 700;
@@ -71,6 +72,12 @@ article{
                 color: #0082c3;
             }
         }
+    }
+    ul li:hover span{
+        text-decoration: underline;
+    }
+    ul li:hover{
+        background: linear-gradient(to right,white 60%,#edeff1);
     }
     .sq{
         width: 34px;
@@ -259,6 +266,7 @@ section{
         h3{
             font-size: 16px;
             color: #323233;
+            margin-bottom: 50px;
         }
     }
     .star5{

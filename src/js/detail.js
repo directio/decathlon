@@ -1,4 +1,13 @@
-
+/* 点击小图切换商品 */
+$('.small-img').each((index,value)=>{
+    $(value).click(function(){
+        $('.big img').hide();
+        $('.big img').eq(index).show();
+        $('.small-img').css('border','none');
+        $(this).css('border', '2px solid #0082c3');
+        $('.number').text(index + 1);
+    })
+})
 /* 点击加入购物车事件 */
 $('.cart').click(function(){
     /* 头部显示添加购物车成功 */

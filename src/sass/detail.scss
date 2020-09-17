@@ -69,15 +69,28 @@ nav{
                     width: 56px;
                 }
             } 
+            .small-img:nth-of-type(1){
+                border: 2px solid #0082c3;
+            }
             p{
                 color: #7d7e80;
                 font-size: 14px;
+                .number{
+                    color: #0082c3;
+                }
             }
         }
-        .big img{
-            float: left;
-            width: 500px;
-            margin:80px 0 0 120px;
+        .big{
+            overflow: hidden;
+            position: relative;
+            img{
+                float: left;
+                width: 500px;
+                margin:80px 0 0 120px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
         }
     }
     .pro-detail{
@@ -149,12 +162,12 @@ nav{
                     font-weight: normal;
                 }
             }
-            .small-img img{
+            .sm img{
                 width: 44px;
                 margin-right: 15px;
                 margin-bottom: 15px;
             }
-            .small-img img:nth-of-type(2){
+            .sm img:nth-of-type(2){
                 border: 2px solid #0082c3;
             }
             .yh{
