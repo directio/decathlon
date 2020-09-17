@@ -1,5 +1,24 @@
 @import 'public';
-
+/* 回到顶部 */
+.to-top{
+    width: 0;
+    height: 0;
+    border-right: 0 solid transparent;
+    border-bottom: 100px solid #0082c3;
+    border-left: 100px solid transparent;
+    border-top: 0 solid transparent;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    display: none;
+    span{
+        color: white;
+        position: absolute;
+        left: -40px;
+        bottom: -80px;
+    }
+}
 /* 轮播图 */
 .swiper-contione {
     width: 100%;
@@ -51,7 +70,6 @@
     justify-content: center;
     transition: all 0.4s ease;
 }
-
 .swiper-right {
     width: 60px;
     height: 100%;

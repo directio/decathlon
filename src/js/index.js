@@ -1,5 +1,20 @@
+/* 回到顶部 */
+$(window).scroll(function(){
+    console.log($(this).scrollTop());
+    console.log($(this).scrollTop() > $('body').outerHeight() * 0.8)
+    if($(this).scrollTop() > $('body').outerHeight() * 0.7){
+        $('.to-top').show();
+    }else{
+        $('.to-top').hide();
+    }
+})
+$('.to-top').click(function(){
+    $(this).hide();
+    $('body').scrollTop(0);
+    $(document).scrollTop(0);
+})
 
- /* 首页上边轮播图 */
+ /* 首页轮播图 */
 $('.swiper-item').width($(window).width());
  class Swiper {
     constructor() {
